@@ -23,4 +23,4 @@ Le jeu est généré aléatoirement, chaque partie sera différente. Les déplac
 ![](/img/FlappyTxt.png)
 
 ## Lien
-[Github](https://github.com/LeBuG63/FlappyTxt)
+[Github](https://github.com/rachartier/FlappyTxt)

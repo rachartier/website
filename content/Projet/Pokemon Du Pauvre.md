@@ -21,7 +21,7 @@ Jeu ressemblant aux fameux jeux Pokemon, ce "pokemon du pauvre" vise à creer un
 
 
 ## Lien
-[Github](https://github.com/LeBuG63/pokemondp)
+[Github](https://github.com/rachartier/pokemondp)
 
 
 ### Sélection du Pokemon (aléatoire)

@@ -47,4 +47,4 @@ Tout le jeu est généré procéduralement, ce qui signifie que chaque partie es
 ![](/img/marche.png)
 
 ## Lien
-[Github](https://github.com/LeBuG63/galaxy)
+[Github](https://github.com/rachartier/galaxy)
