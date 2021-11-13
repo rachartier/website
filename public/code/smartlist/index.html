@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="SmartList">
+<meta itemprop="description" content="Un programme qui cherche et complete une suite logique dans une liste de nombres donnes.
+ Il faut tout d&rsquo;abord executer le programme via &ldquo;./smartlist&rdquo; Ensuite, il faut entrer un nombre (N), ce qui permettra d&rsquo;ecrire N termes. Enfin, il faut mettre une chaine de caracteres contenant la suite. Exemples: &#43; &ldquo;0 1 2&rdquo; &#43; &ldquo;9 4&rdquo; &#43; &ldquo;100 50 25&rdquo; &#43; &ldquo;1 2 4&rdquo; &#43; &ldquo;1 1&rdquo; &#43; &hellip;  Execution:"><meta itemprop="datePublished" content="2016-10-05T22:59:58+02:00" />
+<meta itemprop="dateModified" content="2016-10-05T22:59:58+02:00" />
+<meta itemprop="wordCount" content="533">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="SmartList" />
+<meta property="og:description" content="Un programme qui cherche et complete une suite logique dans une liste de nombres donnes.
+ Il faut tout d&rsquo;abord executer le programme via &ldquo;./smartlist&rdquo; Ensuite, il faut entrer un nombre (N), ce qui permettra d&rsquo;ecrire N termes. Enfin, il faut mettre une chaine de caracteres contenant la suite. Exemples: &#43; &ldquo;0 1 2&rdquo; &#43; &ldquo;9 4&rdquo; &#43; &ldquo;100 50 25&rdquo; &#43; &ldquo;1 2 4&rdquo; &#43; &ldquo;1 1&rdquo; &#43; &hellip;  Execution:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://rachartier.github.io/code/smartlist/" /><meta property="article:section" content="Code" />
+<meta property="article:published_time" content="2016-10-05T22:59:58+02:00" />
+<meta property="article:modified_time" content="2016-10-05T22:59:58+02:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SmartList"/>
+<meta name="twitter:description" content="Un programme qui cherche et complete une suite logique dans une liste de nombres donnes.
+ Il faut tout d&rsquo;abord executer le programme via &ldquo;./smartlist&rdquo; Ensuite, il faut entrer un nombre (N), ce qui permettra d&rsquo;ecrire N termes. Enfin, il faut mettre une chaine de caracteres contenant la suite. Exemples: &#43; &ldquo;0 1 2&rdquo; &#43; &ldquo;9 4&rdquo; &#43; &ldquo;100 50 25&rdquo; &#43; &ldquo;1 2 4&rdquo; &#43; &ldquo;1 1&rdquo; &#43; &hellip;  Execution:"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>SmartList</title>
+	<link rel="stylesheet" href="http://rachartier.github.io/css/style.min.39b711d616ac074e5bcfd0e4a4334f7a8be122688e52867429fce1782f5cb5f5.css" integrity="sha256-ObcR1hasB05bz9DkpDNPeovhImiOUoZ0KfzheC9ctfU=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="http://rachartier.github.io/">Raphaël CHARTIER</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="http://rachartier.github.io/projet/">Projets</a>
+				<a href="http://rachartier.github.io/code/">Codes</a>
+				<a href="http://rachartier.github.io/cv/">CV</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://www.linkedin.com/in/rapha%C3%ABl-chartier-3916581ab/" target="_blank" rel="noopener me" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="https://github.com/rachartier" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="http://rachartier.github.io/projet/">Projets</a></li>
+			<li><a href="http://rachartier.github.io/code/">Codes</a></li>
+			<li><a href="http://rachartier.github.io/cv/">CV</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner thin animated fadeIn faster">
+		<h1>SmartList</h1>
+		<div class="content">
+			<p>Un programme qui cherche et complete une suite logique dans une liste de nombres donnes.</p>
+<ol>
+<li>Il faut tout d&rsquo;abord executer le programme via &ldquo;./smartlist&rdquo;</li>
+<li>Ensuite, il faut entrer un nombre (N), ce qui permettra d&rsquo;ecrire N termes.</li>
+<li>Enfin, il faut mettre une chaine de caracteres contenant la suite. Exemples:
++ &ldquo;0 1 2&rdquo;
++ &ldquo;9 4&rdquo;
++ &ldquo;100 50 25&rdquo;
++ &ldquo;1 2 4&rdquo;
++ &ldquo;1 1&rdquo;
++ &hellip;</li>
+</ol>
+<p>Execution:</p>
+<pre tabindex="0"><code>./smartlist 10 &quot;1 2 3&quot; 
+./smartlist 42 &quot;1.8 5.3&quot; 
+./smartlist 20 &quot;2 1 0.5&quot;
+</code></pre><p>Le programme va ensuite déterminer le type de la suite</p>
+<ul>
+<li>&ldquo;UNKNOW&rdquo;: Il n&rsquo;y aucune suite logique, du type (&ldquo;1 2 5&rdquo;)</li>
+<li>&ldquo;CONSTANT&rdquo;: La suite est constante (&ldquo;1 1 1&rdquo;)</li>
+<li>&ldquo;GEOMETRIC&rdquo;: N est divisible par N-1 (2 1 0.5)</li>
+<li>&ldquo;ARITHMETIC&rdquo;: Repère si la suite peut additionner N et N-1 ou soustraire N et N-1</li>
+</ul>
+<p>Ensuite, il fais le calcul pour les X membres de la suite.</p>
+<h2 id="code">Code<a href="#code" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;ctype.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;float.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">enum</span>	<span class="n">e_sequence_type</span> <span class="p">{</span>
+	<span class="n">UNKNOW</span><span class="p">,</span>
+	<span class="n">CONSTANT</span><span class="p">,</span>
+	<span class="n">GEOMETRIC</span><span class="p">,</span>
+	<span class="n">ARITHMETIC</span>
+<span class="p">};</span>
+
+<span class="k">typedef</span> <span class="k">enum</span> <span class="n">e_sequence_type</span>	<span class="n">t_sequence_type</span><span class="p">;</span>
+
+<span class="k">static</span> <span class="kt">int</span> <span class="nf">essentiallyEqual</span><span class="p">(</span><span class="kt">float</span> <span class="n">a</span><span class="p">,</span> <span class="kt">float</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">fabs</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="p">(</span> <span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">fabs</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">?</span> <span class="n">fabs</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">:</span> <span class="n">fabs</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="o">*</span> <span class="n">FLT_EPSILON</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span>	<span class="nf">get_string_carac_numbers</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str_opt</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">array_sequence</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kt">unsigned</span> 	<span class="n">n_carac</span> 	<span class="o">=</span> <span class="mi">0u</span><span class="p">;</span>
+	<span class="kt">char</span> 		<span class="n">delimiters</span><span class="p">[]</span> 	<span class="o">=</span> <span class="s">&#34;, -+&#34;</span><span class="p">;</span>
+	<span class="kt">char</span> 		<span class="o">*</span><span class="n">pch</span> 		<span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+	<span class="n">pch</span> <span class="o">=</span> <span class="n">strtok</span><span class="p">(</span><span class="n">str_opt</span><span class="p">,</span> <span class="n">delimiters</span><span class="p">);</span>
+
+	<span class="k">while</span><span class="p">(</span><span class="n">pch</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">array_sequence</span><span class="p">[</span><span class="n">n_carac</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">atof</span><span class="p">(</span><span class="n">pch</span><span class="p">);</span>
+
+		<span class="n">pch</span> <span class="o">=</span> <span class="n">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">delimiters</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="k">return</span> <span class="n">n_carac</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">t_sequence_type</span> <span class="nf">get_sequence_type</span><span class="p">(</span><span class="kt">float</span> <span class="o">*</span><span class="n">array_sequence</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">n_elem</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">size_t</span> 	<span class="n">index</span><span class="p">;</span>
+	<span class="kt">float</span> 	<span class="n">tmp</span><span class="p">;</span>
+	<span class="kt">int</span> 	<span class="n">err</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="n">tmp</span> <span class="o">=</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">n_elem</span> <span class="o">&amp;&amp;</span> <span class="n">err</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">index</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Si les nombres sont &#34;CONSTANT&#34;
+</span><span class="c1"></span>		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">essentiallyEqual</span><span class="p">((</span><span class="n">array_sequence</span><span class="p">[</span><span class="n">index</span><span class="p">]),</span> <span class="n">tmp</span><span class="p">))</span>
+			<span class="n">err</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">err</span><span class="p">)</span> <span class="k">return</span> <span class="n">CONSTANT</span><span class="p">;</span> <span class="n">err</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="n">tmp</span> <span class="o">=</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">n_elem</span> <span class="o">&amp;&amp;</span> <span class="n">err</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">index</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Si les nombres sont &#34;ARITHMETIC&#34;
+</span><span class="c1"></span>		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">essentiallyEqual</span><span class="p">((</span><span class="n">array_sequence</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">-</span> <span class="n">array_sequence</span><span class="p">[</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]),</span> <span class="n">tmp</span><span class="p">))</span>
+			<span class="n">err</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">err</span><span class="p">)</span> <span class="k">return</span> <span class="n">ARITHMETIC</span><span class="p">;</span> <span class="n">err</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="n">tmp</span> <span class="o">=</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">n_elem</span> <span class="o">&amp;&amp;</span> <span class="n">err</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">index</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Si les nombres sont &#34;GEOMETRIC&#34;
+</span><span class="c1"></span>		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">essentiallyEqual</span><span class="p">((</span><span class="n">array_sequence</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">/</span> <span class="n">array_sequence</span><span class="p">[</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]),</span> <span class="n">tmp</span><span class="p">))</span>
+			<span class="n">err</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">err</span><span class="p">)</span> <span class="k">return</span> <span class="n">GEOMETRIC</span><span class="p">;</span> <span class="n">err</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="k">return</span> <span class="n">UNKNOW</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">continue_sequence</span><span class="p">(</span><span class="n">t_sequence_type</span> <span class="n">sequenceType</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">array_sequence</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">n_to_print</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kt">unsigned</span> 	<span class="n">index</span><span class="p">;</span>
+	<span class="kt">float</span> 		<span class="n">factor</span><span class="p">;</span>
+	<span class="kt">float</span> 		<span class="n">value</span><span class="p">;</span>
+
+	<span class="k">switch</span><span class="p">(</span><span class="n">sequenceType</span><span class="p">)</span>
+	<span class="p">{</span>
+	<span class="k">case</span> <span class="nl">ARITHMETIC</span><span class="p">:</span>
+		<span class="n">factor</span> 	<span class="o">=</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+		<span class="n">value</span> 	<span class="o">=</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Type: Arithmetique</span><span class="se">\n</span><span class="s">Raison: %f</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">factor</span><span class="p">);</span>
+
+		<span class="k">for</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">n_to_print</span><span class="p">;</span> <span class="o">++</span><span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">&#34;[%u] %.3f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+			<span class="n">value</span> <span class="o">+=</span> <span class="n">factor</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="nl">GEOMETRIC</span><span class="p">:</span>
+		<span class="n">factor</span> 	<span class="o">=</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+		<span class="n">value</span> 	<span class="o">=</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Type: Geometrique</span><span class="se">\n</span><span class="s">Raison: %f</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">factor</span><span class="p">);</span>
+
+		<span class="k">for</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">n_to_print</span><span class="p">;</span> <span class="o">++</span><span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">&#34;[%u] %.3f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+			<span class="n">value</span> <span class="o">*=</span> <span class="n">factor</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">break</span><span class="p">;</span>
+
+	<span class="k">case</span> <span class="nl">CONSTANT</span><span class="p">:</span>
+		<span class="n">value</span> <span class="o">=</span> <span class="n">array_sequence</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Type: Constante</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+
+		<span class="k">for</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">n_to_print</span><span class="p">;</span> <span class="o">++</span><span class="n">index</span><span class="p">)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">&#34;[%u] %.3f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+		<span class="k">break</span><span class="p">;</span>
+
+	<span class="k">case</span> <span class="nl">UNKNOW</span><span class="p">:</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Il n&#39;y a aucune sequence logique trouvee.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+		<span class="k">break</span><span class="p">;</span>
+
+	<span class="k">default</span><span class="o">:</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;Erreur: il faut 3 arguments.&#34;</span><span class="p">);</span>
+		<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">t_sequence_type</span>	<span class="n">sequence_type</span><span class="p">;</span>
+
+	<span class="n">size_t</span> 		<span class="n">n_to_print</span> 	<span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span><span class="p">)</span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+	<span class="n">size_t</span> 		<span class="n">size_string_ope</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+	<span class="kt">float</span> 		<span class="o">*</span><span class="n">array_sequence</span>	<span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">size_string_ope</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">));</span>
+	<span class="kt">int</span> 		<span class="n">n</span><span class="p">;</span>
+
+	<span class="k">if</span><span class="p">(</span><span class="n">array_sequence</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;Erreur: memoire allouee indisponible&#34;</span><span class="p">);</span>
+		<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">n</span> <span class="o">=</span> <span class="n">get_string_carac_numbers</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">array_sequence</span><span class="p">);</span>
+
+	<span class="n">sequence_type</span> <span class="o">=</span> <span class="n">get_sequence_type</span><span class="p">(</span><span class="n">array_sequence</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+
+	<span class="n">continue_sequence</span><span class="p">(</span><span class="n">sequence_type</span><span class="p">,</span> <span class="n">array_sequence</span><span class="p">,</span> <span class="n">n_to_print</span><span class="p">);</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">array_sequence</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+		</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2021 <a href="http://rachartier.github.io/">Raphaël CHARTIER</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="http://rachartier.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="http://rachartier.github.io/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>

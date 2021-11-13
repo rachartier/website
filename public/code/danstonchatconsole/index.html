@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="DansTonChatConsole">
+<meta itemprop="description" content="DansTonChatConsole permet de voir les quotes du site &ldquo;danstonchat.com&rdquo; dans votre terminal. Compilation
+Si vous n&rsquo;avez pas &ldquo;libcurl&rdquo; d&rsquo;installer, entrez cette commande:
+sudo apt-get install libcurl3-dev Pour compiler:
+gcc dtcconsole.c $(pkg-config --libs --cflags libcurl) -Wall -Wextra -o dtcconsole Commandes  ./dtcconsole --random (-r)[N]: affiche N quotes aléatoire ./dtcconsole --last (-l)[N]: affiche les N dernière quotes ./dtcconsole --quote (-q)[ID]: affiche la quote souhaite  Code #include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;#include &lt;ctype.h&gt;#include &lt;stdbool.h&gt;#include &lt;time."><meta itemprop="datePublished" content="2015-07-25T23:00:14+02:00" />
+<meta itemprop="dateModified" content="2015-07-25T23:00:14+02:00" />
+<meta itemprop="wordCount" content="834">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="DansTonChatConsole" />
+<meta property="og:description" content="DansTonChatConsole permet de voir les quotes du site &ldquo;danstonchat.com&rdquo; dans votre terminal. Compilation
+Si vous n&rsquo;avez pas &ldquo;libcurl&rdquo; d&rsquo;installer, entrez cette commande:
+sudo apt-get install libcurl3-dev Pour compiler:
+gcc dtcconsole.c $(pkg-config --libs --cflags libcurl) -Wall -Wextra -o dtcconsole Commandes  ./dtcconsole --random (-r)[N]: affiche N quotes aléatoire ./dtcconsole --last (-l)[N]: affiche les N dernière quotes ./dtcconsole --quote (-q)[ID]: affiche la quote souhaite  Code #include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;#include &lt;ctype.h&gt;#include &lt;stdbool.h&gt;#include &lt;time." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://rachartier.github.io/code/danstonchatconsole/" /><meta property="article:section" content="Code" />
+<meta property="article:published_time" content="2015-07-25T23:00:14+02:00" />
+<meta property="article:modified_time" content="2015-07-25T23:00:14+02:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DansTonChatConsole"/>
+<meta name="twitter:description" content="DansTonChatConsole permet de voir les quotes du site &ldquo;danstonchat.com&rdquo; dans votre terminal. Compilation
+Si vous n&rsquo;avez pas &ldquo;libcurl&rdquo; d&rsquo;installer, entrez cette commande:
+sudo apt-get install libcurl3-dev Pour compiler:
+gcc dtcconsole.c $(pkg-config --libs --cflags libcurl) -Wall -Wextra -o dtcconsole Commandes  ./dtcconsole --random (-r)[N]: affiche N quotes aléatoire ./dtcconsole --last (-l)[N]: affiche les N dernière quotes ./dtcconsole --quote (-q)[ID]: affiche la quote souhaite  Code #include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;#include &lt;ctype.h&gt;#include &lt;stdbool.h&gt;#include &lt;time."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>DansTonChatConsole</title>
+	<link rel="stylesheet" href="http://rachartier.github.io/css/style.min.39b711d616ac074e5bcfd0e4a4334f7a8be122688e52867429fce1782f5cb5f5.css" integrity="sha256-ObcR1hasB05bz9DkpDNPeovhImiOUoZ0KfzheC9ctfU=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="http://rachartier.github.io/">Raphaël CHARTIER</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="http://rachartier.github.io/projet/">Projets</a>
+				<a href="http://rachartier.github.io/code/">Codes</a>
+				<a href="http://rachartier.github.io/cv/">CV</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://www.linkedin.com/in/rapha%C3%ABl-chartier-3916581ab/" target="_blank" rel="noopener me" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="https://github.com/rachartier" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="http://rachartier.github.io/projet/">Projets</a></li>
+			<li><a href="http://rachartier.github.io/code/">Codes</a></li>
+			<li><a href="http://rachartier.github.io/cv/">CV</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner thin animated fadeIn faster">
+		<h1>DansTonChatConsole</h1>
+		<div class="content">
+			<p>DansTonChatConsole permet de voir les quotes du site &ldquo;danstonchat.com&rdquo; dans votre terminal.
+Compilation</p>
+<p>Si vous n&rsquo;avez pas &ldquo;libcurl&rdquo; d&rsquo;installer, entrez cette commande:</p>
+<pre tabindex="0"><code>sudo apt-get install libcurl3-dev
+</code></pre><p>Pour compiler:</p>
+<pre tabindex="0"><code>gcc dtcconsole.c $(pkg-config --libs --cflags libcurl) -Wall -Wextra -o dtcconsole
+</code></pre><h3 id="commandes">Commandes<a href="#commandes" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<ul>
+<li><code>./dtcconsole --random (-r)[N]: affiche N quotes aléatoire</code></li>
+<li><code>./dtcconsole --last (-l)[N]: affiche les N dernière quotes</code></li>
+<li><code>./dtcconsole --quote (-q)[ID]: affiche la quote souhaite</code></li>
+</ul>
+<h3 id="code">Code<a href="#code" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;ctype.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;getopt.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;curl/curl.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="k">struct</span> <span class="n">s_chunk</span> <span class="p">{</span>
+    <span class="kt">char</span>    <span class="o">*</span><span class="n">memory</span><span class="p">;</span>
+    <span class="kt">int</span>     <span class="n">size</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">s_param</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="n">random</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">last</span><span class="p">;</span>
+
+    <span class="kt">int</span>  <span class="n">n_quotes</span><span class="p">;</span>
+    <span class="kt">int</span>  <span class="n">last_quote_id</span><span class="p">;</span>
+    <span class="kt">int</span>  <span class="n">quote_selected</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">s_chunk</span> <span class="n">t_chunk</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">s_param</span> <span class="n">t_param</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">WriteInMemory</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">contents</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">size</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">nmemb</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">userp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span>         <span class="n">realsize</span> <span class="o">=</span> <span class="n">size</span> <span class="o">*</span> <span class="n">nmemb</span><span class="p">;</span>
+    <span class="n">t_chunk</span>     <span class="o">*</span><span class="n">chunk</span> <span class="o">=</span> <span class="p">(</span><span class="n">t_chunk</span> <span class="o">*</span><span class="p">)</span><span class="n">userp</span><span class="p">;</span>
+
+    <span class="n">chunk</span><span class="o">-&gt;</span><span class="n">memory</span> <span class="o">=</span> <span class="n">realloc</span><span class="p">(</span><span class="n">chunk</span><span class="o">-&gt;</span><span class="n">memory</span><span class="p">,</span> <span class="n">chunk</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">+</span> <span class="n">realsize</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">chunk</span><span class="o">-&gt;</span><span class="n">memory</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;Pas assez de mémoire.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">chunk</span><span class="o">-&gt;</span><span class="n">memory</span><span class="p">[</span><span class="n">chunk</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">]),</span> <span class="n">contents</span><span class="p">,</span> <span class="n">realsize</span><span class="p">);</span>
+    <span class="n">chunk</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">+=</span> <span class="n">realsize</span><span class="p">;</span>
+    <span class="n">chunk</span><span class="o">-&gt;</span><span class="n">memory</span><span class="p">[</span><span class="n">chunk</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">realsize</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">GetWordPosition</span><span class="p">(</span><span class="n">t_chunk</span> <span class="n">chunk</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">word</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="n">word_found</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">chunk</span><span class="p">.</span><span class="n">size</span> <span class="o">-</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">strlen</span><span class="p">(</span><span class="n">word</span><span class="p">);</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">chunk</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">j</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">strlen</span><span class="p">(</span><span class="n">word</span><span class="p">);</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>            
+                <span class="k">if</span><span class="p">(</span><span class="n">chunk</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">word</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="p">{</span>
+                    <span class="n">word_found</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+                    <span class="n">i</span> <span class="o">+=</span> <span class="n">j</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>                  
+                <span class="p">}</span>
+                <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">word_found</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>        
+                <span class="p">}</span>  
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">word_found</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">GetLastQuoteId</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">CURL</span>        <span class="o">*</span><span class="n">curl_handle</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">CURLcode</span>    <span class="n">res</span><span class="p">;</span>
+
+    <span class="n">t_chunk</span>     <span class="n">chunk</span><span class="p">;</span>
+
+    <span class="kt">int</span>         <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span>         <span class="n">w_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span>         <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="kt">char</span>        <span class="n">digits</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
+
+    <span class="n">chunk</span><span class="p">.</span><span class="n">memory</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">chunk</span><span class="p">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+   
+    <span class="n">curl_handle</span> <span class="o">=</span> <span class="n">curl_easy_init</span><span class="p">();</span>
+
+    <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl_handle</span><span class="p">,</span> <span class="n">CURLOPT_URL</span><span class="p">,</span> <span class="s">&#34;http://danstonchat.com&#34;</span><span class="p">);</span>
+    <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl_handle</span><span class="p">,</span> <span class="n">CURLOPT_WRITEFUNCTION</span><span class="p">,</span> <span class="n">WriteInMemory</span><span class="p">);</span>
+    <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl_handle</span><span class="p">,</span> <span class="n">CURLOPT_WRITEDATA</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">chunk</span><span class="p">);</span>
+
+    <span class="n">res</span> <span class="o">=</span> <span class="n">curl_easy_perform</span><span class="p">(</span><span class="n">curl_handle</span><span class="p">);</span>
+    
+    <span class="k">if</span><span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">CURLE_OK</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">w_index</span> <span class="o">=</span> <span class="n">GetWordPosition</span><span class="p">(</span><span class="n">chunk</span><span class="p">,</span> <span class="s">&#34;item item&#34;</span><span class="p">);</span>   
+
+        <span class="k">if</span><span class="p">(</span><span class="n">w_index</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">w_index</span> <span class="o">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">strlen</span><span class="p">(</span><span class="s">&#34;item item&#34;</span><span class="p">);</span> <span class="n">isdigit</span><span class="p">(</span><span class="n">chunk</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">digits</span><span class="p">[</span><span class="n">j</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">chunk</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>        
+            <span class="p">}</span>
+        <span class="p">}</span>    
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">digits</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">free</span><span class="p">(</span><span class="n">chunk</span><span class="p">.</span><span class="n">memory</span><span class="p">);</span>
+    <span class="n">curl_easy_cleanup</span><span class="p">(</span><span class="n">curl_handle</span><span class="p">);</span>
+ 
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span> <span class="nf">EreaseHtmlInQuote</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">quote_length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">int</span>    <span class="n">n_keywords</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">int</span>    <span class="n">n_punctutations</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+    <span class="k">static</span> <span class="kt">char</span>         <span class="o">*</span><span class="n">delimiter</span> <span class="o">=</span> <span class="s">&#34;&lt;&gt;#&amp;;&#34;</span><span class="p">;</span>
+
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span>   <span class="o">*</span><span class="n">keyword</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&#34;/span&#34;</span><span class="p">,</span>
+        <span class="s">&#34;br /&#34;</span><span class="p">,</span>
+        <span class="s">&#34;span class=</span><span class="se">\&#34;</span><span class="s">decoration</span><span class="se">\&#34;</span><span class="s">&#34;</span><span class="p">,</span>
+
+        <span class="s">&#34;gt&#34;</span><span class="p">,</span>
+        <span class="s">&#34;lt&#34;</span><span class="p">,</span>
+        <span class="s">&#34;039&#34;</span><span class="p">,</span>
+        <span class="s">&#34;quot&#34;</span>
+    <span class="p">};</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">punctuation_translated</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&#34;&gt;&#34;</span><span class="p">,</span>
+        <span class="s">&#34;&lt;&#34;</span><span class="p">,</span>
+        <span class="s">&#34;&#39;&#34;</span><span class="p">,</span>
+        <span class="s">&#34;</span><span class="se">\&#34;</span><span class="s">&#34;</span>
+    <span class="p">};</span>
+
+    <span class="kt">int</span>     <span class="n">new_quote_length</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    
+    <span class="kt">char</span>    <span class="o">*</span><span class="n">pch</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span> 
+    <span class="kt">char</span>    <span class="n">tmp_arr</span><span class="p">[</span><span class="n">quote_length</span><span class="p">];</span> 
+
+    <span class="kt">bool</span>    <span class="n">success</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+   
+    <span class="n">memset</span><span class="p">(</span><span class="n">tmp_arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">quote_length</span><span class="p">);</span>
+
+    <span class="n">pch</span> <span class="o">=</span> <span class="n">strtok</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">delimiter</span><span class="p">);</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="n">pch</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n_keywords</span> <span class="o">+</span> <span class="n">n_punctutations</span> <span class="o">&amp;&amp;</span> <span class="n">success</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>   
+            <span class="k">if</span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">pch</span><span class="p">,</span> <span class="n">keyword</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">success</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>          <span class="n">strcat</span><span class="p">(</span><span class="n">tmp_arr</span><span class="p">,</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">n_keywords</span><span class="p">)</span> <span class="n">strcat</span><span class="p">(</span><span class="n">tmp_arr</span><span class="p">,</span> <span class="n">punctuation_translated</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">n_keywords</span><span class="p">]);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>        
+        
+        <span class="k">if</span><span class="p">(</span><span class="n">success</span><span class="p">)</span> <span class="n">strcat</span><span class="p">(</span><span class="n">tmp_arr</span><span class="p">,</span> <span class="n">pch</span><span class="p">);</span>            
+       <span class="k">else</span>
+           <span class="n">success</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+
+        <span class="n">pch</span> <span class="o">=</span> <span class="n">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">delimiter</span><span class="p">);</span>
+    <span class="p">}</span>   
+
+    <span class="n">new_quote_length</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">tmp_arr</span><span class="p">);</span>
+
+    <span class="n">memset</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="sc">&#39;\0&#39;</span><span class="p">,</span> <span class="n">quote_length</span><span class="p">);</span>
+    <span class="n">memcpy</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">tmp_arr</span><span class="p">,</span> <span class="n">new_quote_length</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ParseQuote</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">quote_length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">EreaseHtmlInQuote</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">quote_length</span><span class="p">);</span>            
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">PrintQuote</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">quote_id</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;### %d ###</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">quote_id</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">arr</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span> <span class="nf">SetUrlDTCQuote</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">url</span><span class="p">,</span> <span class="kt">int</span> <span class="n">quote_id</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="kt">char</span>        <span class="n">tmp_url</span><span class="p">[</span><span class="mi">128</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;http://danstonchat.com/&#34;</span><span class="p">;</span>
+    <span class="kt">char</span>        <span class="n">quote_id_text</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
+    
+    <span class="n">sprintf</span><span class="p">(</span><span class="n">quote_id_text</span><span class="p">,</span> <span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">quote_id</span><span class="p">);</span>
+
+    <span class="n">strcat</span><span class="p">(</span><span class="n">tmp_url</span><span class="p">,</span> <span class="n">quote_id_text</span><span class="p">);</span> 
+    <span class="n">strcat</span><span class="p">(</span><span class="n">tmp_url</span><span class="p">,</span> <span class="s">&#34;.html&#34;</span><span class="p">);</span>
+
+    <span class="n">memcpy</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tmp_url</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">tmp_url</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ShowQuoteText</span><span class="p">(</span><span class="kt">int</span> <span class="n">quote_id</span><span class="p">,</span> <span class="kt">int</span> <span class="n">res</span><span class="p">,</span> <span class="n">t_chunk</span> <span class="n">chunk</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">CURLE_OK</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="kt">int</span>  <span class="n">size_word</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">strlen</span><span class="p">(</span><span class="s">&#34;class=</span><span class="se">\&#34;</span><span class="s">decoration</span><span class="se">\&#34;</span><span class="s">&gt;&#34;</span><span class="p">);</span>        
+        <span class="kt">int</span>  <span class="n">quote_length</span><span class="p">;</span>
+
+        <span class="kt">int</span>  <span class="n">quote_begin_index</span> <span class="o">=</span> <span class="n">GetWordPosition</span><span class="p">(</span><span class="n">chunk</span><span class="p">,</span> <span class="s">&#34;class=</span><span class="se">\&#34;</span><span class="s">decoration</span><span class="se">\&#34;</span><span class="s">&gt;&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="n">size_word</span><span class="p">;</span>
+        <span class="kt">int</span>  <span class="n">quote_end_index</span> <span class="o">=</span> <span class="n">GetWordPosition</span><span class="p">(</span><span class="n">chunk</span><span class="p">,</span> <span class="s">&#34;&lt;/a&gt;&lt;/p&gt;&#34;</span><span class="p">)</span> <span class="p">;</span>
+
+        <span class="n">quote_length</span> <span class="o">=</span> <span class="n">quote_end_index</span> <span class="o">-</span> <span class="n">quote_begin_index</span><span class="p">;</span>
+
+        <span class="kt">char</span> <span class="n">quote_text</span><span class="p">[</span><span class="n">quote_length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">quote_length</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">quote_text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">chunk</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="n">quote_begin_index</span> <span class="o">+</span> <span class="n">i</span><span class="p">];</span> 
+        <span class="p">}</span>        
+        
+        <span class="n">quote_text</span><span class="p">[</span><span class="n">quote_length</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span> 
+
+        <span class="n">ParseQuote</span><span class="p">(</span><span class="n">quote_text</span><span class="p">,</span> <span class="n">quote_length</span><span class="p">);</span>
+        <span class="n">PrintQuote</span><span class="p">(</span><span class="n">quote_text</span><span class="p">,</span> <span class="n">quote_id</span><span class="p">);</span> 
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;Impossible de se connecter&#34;</span><span class="p">);</span>
+    <span class="p">}</span> 
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ShowQuote</span><span class="p">(</span><span class="n">t_param</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>    
+    <span class="n">CURL</span>        <span class="o">*</span><span class="n">curl_handle</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">CURLcode</span>     <span class="n">res</span><span class="p">;</span>
+
+    <span class="n">t_chunk</span>     <span class="n">chunk</span><span class="p">;</span>
+
+    <span class="kt">int</span>         <span class="n">quote_id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">char</span>        <span class="n">url</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">p</span><span class="p">.</span><span class="n">n_quotes</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="n">chunk</span><span class="p">.</span><span class="n">memory</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">chunk</span><span class="p">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        
+        <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">last</span><span class="p">)</span>                      <span class="n">quote_id</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">last_quote_id</span> <span class="o">-</span> <span class="n">i</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">quote_selected</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span>   <span class="n">quote_id</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">quote_selected</span><span class="p">;</span>
+        <span class="k">else</span>                            <span class="n">quote_id</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">last_quote_id</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>        
+            
+        <span class="n">SetUrlDTCQuote</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">quote_id</span><span class="p">);</span>
+
+        <span class="n">curl_handle</span> <span class="o">=</span> <span class="n">curl_easy_init</span><span class="p">();</span>
+        <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl_handle</span><span class="p">,</span> <span class="n">CURLOPT_URL</span><span class="p">,</span> <span class="n">url</span><span class="p">);</span>
+        <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl_handle</span><span class="p">,</span> <span class="n">CURLOPT_WRITEFUNCTION</span><span class="p">,</span> <span class="n">WriteInMemory</span><span class="p">);</span>
+        <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl_handle</span><span class="p">,</span> <span class="n">CURLOPT_WRITEDATA</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">chunk</span><span class="p">);</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">curl_easy_perform</span><span class="p">(</span><span class="n">curl_handle</span><span class="p">);</span>
+          
+        <span class="n">ShowQuoteText</span><span class="p">(</span><span class="n">quote_id</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">chunk</span><span class="p">);</span>
+        
+        <span class="n">curl_easy_cleanup</span><span class="p">(</span><span class="n">curl_handle</span><span class="p">);</span>
+        <span class="n">free</span><span class="p">(</span><span class="n">chunk</span><span class="p">.</span><span class="n">memory</span><span class="p">);</span>   
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">GetNumberThirdArgument</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">argc</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>       
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ShowHelp</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="kt">char</span> <span class="n">help_text</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">&#34;Arguments:</span><span class="se">\n</span><span class="s">&#34;</span>
+            <span class="s">&#34;</span><span class="se">\t</span><span class="s">N n&#39;est pas obligé d&#39;etre spécifié</span><span class="se">\n</span><span class="s">&#34;</span>
+            <span class="s">&#34;</span><span class="se">\t</span><span class="s">[-r -random] N: affiche N quotes</span><span class="se">\n</span><span class="s">&#34;</span>
+            <span class="s">&#34;</span><span class="se">\t</span><span class="s">[-l -last] N: affiche les N dernières quotes sorties</span><span class="se">\n</span><span class="s">&#34;</span>
+            <span class="s">&#34;</span><span class="se">\t</span><span class="s">[-q -quote] ID: affiche la quote attribuée à l&#39;ID</span><span class="se">\n\n</span><span class="s">&#34;</span>
+    <span class="p">};</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">help_text</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="n">curl_global_init</span><span class="p">(</span><span class="n">CURL_GLOBAL_ALL</span><span class="p">);</span>
+    <span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
+    
+    <span class="n">t_param</span>     <span class="n">p</span><span class="p">;</span>
+
+    <span class="k">static</span> <span class="k">struct</span> <span class="n">option</span> <span class="n">long_options</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="p">{</span><span class="s">&#34;random&#34;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;r&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">&#34;last&#34;</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;l&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">&#34;quote&#34;</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;q&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">&#34;help&#34;</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="sc">&#39;h&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="kt">int</span>         <span class="n">last_id_quote</span> <span class="o">=</span> <span class="n">GetLastQuoteId</span><span class="p">();</span>
+    <span class="kt">int</span>         <span class="n">option_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">char</span>        <span class="n">opt</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&#34;rlqh&#34;</span><span class="p">;</span>
+    <span class="kt">char</span>        <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+
+    <span class="n">p</span><span class="p">.</span><span class="n">last_quote_id</span> <span class="o">=</span> <span class="n">last_id_quote</span><span class="p">;</span>
+    <span class="n">p</span><span class="p">.</span><span class="n">last</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="n">p</span><span class="p">.</span><span class="n">random</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="n">p</span><span class="p">.</span><span class="n">quote_selected</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    
+    <span class="k">if</span><span class="p">(</span><span class="n">last_id_quote</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Problème de connexion.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+        <span class="n">curl_global_cleanup</span><span class="p">();</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">while</span><span class="p">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">getopt_long</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="n">opt</span><span class="p">,</span> <span class="n">long_options</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">option_index</span><span class="p">))</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n_quotes</span> <span class="o">=</span> <span class="n">GetNumberThirdArgument</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+
+    <span class="n">p</span><span class="p">.</span><span class="n">n_quotes</span> <span class="o">=</span> <span class="n">n_quotes</span><span class="p">;</span>
+        <span class="k">switch</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="sc">&#39;r&#39;</span><span class="o">:</span>
+            <span class="n">p</span><span class="p">.</span><span class="n">random</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;l&#39;</span><span class="o">:</span>
+            <span class="n">p</span><span class="p">.</span><span class="n">last</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;q&#39;</span><span class="o">:</span>
+            <span class="n">p</span><span class="p">.</span><span class="n">n_quotes</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">p</span><span class="p">.</span><span class="n">quote_selected</span> <span class="o">=</span> <span class="n">n_quotes</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;h&#39;</span><span class="o">:</span>
+            <span class="n">ShowHelp</span><span class="p">();</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;?&#39;</span><span class="o">:</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Commande inconnue. Tapez --help pour avoir l&#39;aide.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>  
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span> 
+        <span class="n">ShowQuote</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="n">curl_global_cleanup</span><span class="p">();</span>
+    
+    <span class="k">return</span> <span class="n">EXIT_SUCCESS</span><span class="p">;</span>        
+<span class="p">}</span>
+
+</code></pre></div>
+		</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2021 <a href="http://rachartier.github.io/">Raphaël CHARTIER</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="http://rachartier.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="http://rachartier.github.io/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>

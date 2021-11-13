@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Raphaël CHARTIER</title>
-    <link>http://rachartier.github.io/</link>
-    <description>Recent content on Raphaël CHARTIER</description>
+    <title>Projets on Raphaël CHARTIER</title>
+    <link>http://rachartier.github.io/projet/</link>
+    <description>Recent content in Projets on Raphaël CHARTIER</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 07 Jul 2020 01:00:00 +0200</lastBuildDate><atom:link href="http://rachartier.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jul 2020 01:00:00 +0200</lastBuildDate><atom:link href="http://rachartier.github.io/projet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chords</title>
       <link>http://rachartier.github.io/projet/chords/</link>
@@ -42,33 +42,6 @@ Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     C
     </item>
     
     <item>
-      <title>CV</title>
-      <link>http://rachartier.github.io/cv/</link>
-      <pubDate>Sun, 07 Apr 2019 00:36:29 +0200</pubDate>
-      
-      <guid>http://rachartier.github.io/cv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>A Propos</title>
-      <link>http://rachartier.github.io/a-propos/</link>
-      <pubDate>Sun, 07 Apr 2019 00:35:47 +0200</pubDate>
-      
-      <guid>http://rachartier.github.io/a-propos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://rachartier.github.io/about/</link>
-      <pubDate>Sat, 06 Apr 2019 22:20:59 +0200</pubDate>
-      
-      <guid>http://rachartier.github.io/about/</guid>
-      <description>coucou</description>
-    </item>
-    
-    <item>
       <title>Dynamo</title>
       <link>http://rachartier.github.io/projet/dynamo/</link>
       <pubDate>Wed, 06 Feb 2019 23:56:47 +0200</pubDate>
@@ -89,25 +62,55 @@ Dynamo est un jeu de plateforme liant agilité et vitesse pour parvenir à bout 
     </item>
     
     <item>
-      <title>Truth Table</title>
-      <link>http://rachartier.github.io/code/truth-table/</link>
-      <pubDate>Tue, 07 Nov 2017 23:00:35 +0200</pubDate>
+      <title>Galaxy</title>
+      <link>http://rachartier.github.io/projet/galaxy/</link>
+      <pubDate>Fri, 11 Sep 2015 22:57:26 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/truth-table/</guid>
-      <description>Générateur de table de vérité avec la notation polonaise inverse.
-L&amp;rsquo;utilisation se fait via la ligne de commande:
-gcc truthtable.c -Wall -Wextra -std=c11 -lm -o ttable ./ttable &amp;quot;expression&amp;quot; L&amp;rsquo;expression doit être une expression ecrite via la notation polonaise inverse comme suit:
- &amp;ldquo;&amp;lt;variable_1&amp;gt; [variable_2] &amp;lt;opérateur logique&amp;gt;&amp;rdquo; La répétition de ce processus permet de former une expression logique. Le programme va ensuite sortir la table de vérité corespondante, avec les noms des variables transmises.</description>
+      <guid>http://rachartier.github.io/projet/galaxy/</guid>
+      <description>GalaxY est un jeu en console d&amp;rsquo;aventure et d&amp;rsquo;exploration spatiale.
+Vous traversez les galaxies a bord de votre vaisseau en passant par differents systemes planetaires generes aleatoirement. Durant le trajet, vous pourrez fouiller et decouvrir des tresors sur les planetes rencontrees, et commercer avec ces dernieres pour recuperer des marchandises de base (nourriture, eau, fuel) mais aussi pour recruter du personnel sur votre vaisseau. En plus de leur commerce, les planetes possedent leur propre regime politique allant de la simple republique a la monarchie en passant par la dictature.</description>
     </item>
     
     <item>
-      <title>Pendule Double</title>
-      <link>http://rachartier.github.io/code/pendule-double/</link>
-      <pubDate>Mon, 23 Jan 2017 23:00:18 +0200</pubDate>
+      <title>FlappyTXT</title>
+      <link>http://rachartier.github.io/projet/flappytxt/</link>
+      <pubDate>Sun, 15 Feb 2015 22:57:34 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/pendule-double/</guid>
-      <description>Pendule Double est la simulation de &amp;ldquo;l&amp;rsquo;aleatoire chaotique&amp;rdquo; en utilisant un pendule relie a un dernier, qui est fixe.
-Compilation gcc doublependulum.c -o doublependulum -lm -Wall -Wextra -lSDL2 -lSDL2main Commandes  a: diminue la taille du premier pendule | z: augmente la taille du premier pendule e: diminue la taille du second pendule | r: augmente la taille du second pendule q: diminue la masse du premier pendule | s: augmente la masse du premier pendule d: diminue la masse du second pendule | f: augmente la masse du second pendule i: affiche les informations des pendules dans la console n: permet de reinitialiser aléatoirement les pendules  Vidéo Vidéo de démonstration</description>
+      <guid>http://rachartier.github.io/projet/flappytxt/</guid>
+      <description>FlappyTXT est un petit jeu Windows créé pour le fun dans le but d’avoir un n-iéme clone de ce fameux jeu.
+Le principe est vraiment très simple, il suffit d’entrer des commandes pour faire bouger le petit oiseau. Des commandes telles que:
+ “DOWN n” pour faire descendre l’oiseau de n case “UP n” pour faire monter l’oiseau de n case “EXIT” quitte le jeu “HELP” l’aide  Comme pour l’originale , il suffit de faire passer l’oiseau dans le trou pour gagner un point.</description>
+    </item>
+    
+    <item>
+      <title>Pixuzzle</title>
+      <link>http://rachartier.github.io/projet/pixuzzle/</link>
+      <pubDate>Tue, 11 Feb 2014 22:57:37 +0200</pubDate>
+      
+      <guid>http://rachartier.github.io/projet/pixuzzle/</guid>
+      <description>Pixuzzle est un jeu de réflexion/réflexe où le but est de faire le plus haut score. Pour ça il faut &amp;ldquo;exploser&amp;rdquo; des carrés de différentes couleurs:
+ Rouge Vert Bleu Violet Blanc Bleu clair Rouge clair Vert clair Bleu foncé  A chaque fois que vous appuyez sur un Pixel, celui-ci détruit tous les Pixels de même couleur le touchant. De ce fait, il faut les empêcher de s&amp;rsquo;empiler, car une fois qu&amp;rsquo;un seul des Pixels touche le haut de l&amp;rsquo;écran, vous avez perdu la partie.</description>
+    </item>
+    
+    <item>
+      <title>Blue and White</title>
+      <link>http://rachartier.github.io/projet/blue-and-white/</link>
+      <pubDate>Sat, 07 Dec 2013 22:57:43 +0200</pubDate>
+      
+      <guid>http://rachartier.github.io/projet/blue-and-white/</guid>
+      <description>Blue and White est un jeu où le but est de remplir toutes les cases en bleu, c&amp;rsquo;est simple de principe, mais dur de réalisation. Dès que vous cliquez sur une &amp;ldquo;case&amp;rdquo;, cette case devient imédiatement bleu ainsi que celle de gauche, droite, haut et bas. Mais le problème, c&amp;rsquo;est que si cette case est déjà bleu, elle redevient normale, c&amp;rsquo;est-à-dire blanche.
+Vous pouvez choisir la taille de la map (1 à 100), afficher le temps, voir le nombre de coups dont vous avez eu besoin pour gagner, générer aléatoirement une map.</description>
+    </item>
+    
+    <item>
+      <title>ASCII_PhysiX</title>
+      <link>http://rachartier.github.io/projet/ascii_physix/</link>
+      <pubDate>Sun, 14 Apr 2013 22:57:58 +0200</pubDate>
+      
+      <guid>http://rachartier.github.io/projet/ascii_physix/</guid>
+      <description>ASCII_Physix est une sorte de &amp;ldquo;simulation&amp;rdquo; sous un émulateur de terminal. Il permet de poser différents blocs avec différentes caractéristiques disposés en 3 classes:
+ BLOCKS, qui contient des blocs tels que des grilles, blocs durs&amp;hellip; DUST, qui contient la poussiéres, la terre&amp;hellip;  Il existe un fichier .opt pour modifier les caractéristiques de la map. On peut changer sa taille, le caractère des murs&amp;hellip;
+Lien Github</description>
     </item>
     
   </channel>
