@@ -1,5 +1,5 @@
 ---
-title: "Truth Table"
+title: "CComanche"
 date: 2020-03-11T23:00:35+02:00
 draft: true
 comments: false
