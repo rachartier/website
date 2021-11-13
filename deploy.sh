@@ -22,6 +22,6 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git push -f origin master
-git subtree push --prefix=public git@github.com:rachartier/rachartier.github.io.git master
+git push origin master
+git push origin `git subtree push --prefix=public git@github.com:rachartier/rachartier.github.io.git master`:gh-pages --force
 
