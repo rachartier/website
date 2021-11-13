@@ -9,7 +9,7 @@ fi
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-hugo -t hermit # if using a theme, replace with `hugo -t <YOURTHEME>`
+hugo -D -t hermit # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Add changes to git.
 git add .
@@ -25,5 +25,3 @@ git commit -m "$msg"
 git push origin master
 git subtree push --prefix=public git@github.com:rachartier/rachartier.github.io.git gh-pages
 
-# Come Back up to the Project Root
-cd ..
