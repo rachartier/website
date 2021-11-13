@@ -17,19 +17,19 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   name = "Raphaël CHARTIER"
 
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
+  dateform        = "2 Jan, 2006"
+  dateformShort   = "2 Jan"
+  dateformNum     = "02-01-2006"
+  dateformNumTime = "02-01-2006 15:04 -0700"
 
   # Metadata mostly used in document's head
   # description = ""
   # images = [""]
   themeColor = "#494f5c"
 
-  homeSubtitle = "Etudiant Licence Pro Informatique en développement mobile"
+  homeSubtitle = "Etudiant Master 2 Systèmes embarqués pour l'Image et le Son"
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  # bgImg = ""  # Homepage background-image URL
+  bgImg = "/background.png"  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   # gitUrl = "https://github.com/username/repository/commit/"
@@ -38,13 +38,13 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   justifyContent = false  # Set "text-align: justify" to `.content`.
 
   # Add custom css
-  # customCSS = ["css/foo.css", "css/bar.css"]
+  # customCSS = ["/css/custom.css"]
 
   # Social Icons
   # Check https://github.com/Track3/hermit#social-icons for more info.
   [[params.social]]
-    name = "twitter"
-    url = "https://twitter.com/LeBuG63"
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/rapha%C3%ABl-chartier-3916581ab/"
 
   [[params.social]]
     name = "github"
@@ -62,6 +62,6 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     weight = 15
 
   [[menu.main]]
-    name = "Portfolio"
-    url = "portfolio/"
-weight = 20
+    name = "CV"
+    url = "cv/"
+	weight = 20

@@ -1,12 +1,16 @@
 #!/bin/bash
 
+git fetch
+if [[ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]]
+	then echo "\033[31mCurrent branch is not up-to-date, please pull first!\033[0m"
+	exit
+fi
+
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
 hugo -t hermit # if using a theme, replace with `hugo -t <YOURTHEME>`
 
-# Go To Public folder
-cd public
 # Add changes to git.
 git add .
 
