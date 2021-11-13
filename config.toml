@@ -1,6 +1,6 @@
 languageCode = "fr-fr"
 title = "Raphaël CHARTIER"
-baseurl = "http://rachartier.github.io/"
+baseurl = "https://rachartier.github.io/"
 theme = "hermit"
 
 # enableGitInfo = true

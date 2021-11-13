@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Codes on Raphaël CHARTIER</title>
-    <link>http://rachartier.github.io/code/</link>
+    <link>https://rachartier.github.io/code/</link>
     <description>Recent content in Codes on Raphaël CHARTIER</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 11 Mar 2020 23:00:35 +0200</lastBuildDate><atom:link href="http://rachartier.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Mar 2020 23:00:35 +0200</lastBuildDate><atom:link href="https://rachartier.github.io/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CComanche</title>
-      <link>http://rachartier.github.io/code/ccomanche/</link>
+      <link>https://rachartier.github.io/code/ccomanche/</link>
       <pubDate>Wed, 11 Mar 2020 23:00:35 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/ccomanche/</guid>
+      <guid>https://rachartier.github.io/code/ccomanche/</guid>
       <description>Lien Github
 Petit projet qui permet de &amp;ldquo;voler&amp;rdquo; dans un vaisseau en s&amp;rsquo;inspirant du moteur du jeu &amp;ldquo;Comanche&amp;rdquo;.
 Le terrain est un terrain infini, avec plusieurs niveaux disponibles. Le moteur de jeu est très simple. 2 images permettent de répresenter le niveau: - Une image de couleurs - Une image en noir et blanc représentant la hauteur du terrain
@@ -22,10 +22,10 @@ Ces deux images alors combinées permettent la création d&amp;rsquo;un niveau. 
     
     <item>
       <title>Truth Table</title>
-      <link>http://rachartier.github.io/code/truth-table/</link>
+      <link>https://rachartier.github.io/code/truth-table/</link>
       <pubDate>Tue, 07 Nov 2017 23:00:35 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/truth-table/</guid>
+      <guid>https://rachartier.github.io/code/truth-table/</guid>
       <description>Générateur de table de vérité avec la notation polonaise inverse.
 L&amp;rsquo;utilisation se fait via la ligne de commande:
 gcc truthtable.c -Wall -Wextra -std=c11 -lm -o ttable ./ttable &amp;quot;expression&amp;quot; L&amp;rsquo;expression doit être une expression ecrite via la notation polonaise inverse comme suit:
@@ -34,20 +34,20 @@ gcc truthtable.c -Wall -Wextra -std=c11 -lm -o ttable ./ttable &amp;quot;express
     
     <item>
       <title>Pendule Double</title>
-      <link>http://rachartier.github.io/code/pendule-double/</link>
+      <link>https://rachartier.github.io/code/pendule-double/</link>
       <pubDate>Mon, 23 Jan 2017 23:00:18 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/pendule-double/</guid>
+      <guid>https://rachartier.github.io/code/pendule-double/</guid>
       <description>Pendule Double est la simulation de &amp;ldquo;l&amp;rsquo;aleatoire chaotique&amp;rdquo; en utilisant un pendule relie a un dernier, qui est fixe.
 Compilation gcc doublependulum.c -o doublependulum -lm -Wall -Wextra -lSDL2 -lSDL2main Commandes  a: diminue la taille du premier pendule | z: augmente la taille du premier pendule e: diminue la taille du second pendule | r: augmente la taille du second pendule q: diminue la masse du premier pendule | s: augmente la masse du premier pendule d: diminue la masse du second pendule | f: augmente la masse du second pendule i: affiche les informations des pendules dans la console n: permet de reinitialiser aléatoirement les pendules  Vidéo Vidéo de démonstration</description>
     </item>
     
     <item>
       <title>Tiny Virtual Machine</title>
-      <link>http://rachartier.github.io/code/tiny-virtual-machine/</link>
+      <link>https://rachartier.github.io/code/tiny-virtual-machine/</link>
       <pubDate>Wed, 05 Oct 2016 23:00:08 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/tiny-virtual-machine/</guid>
+      <guid>https://rachartier.github.io/code/tiny-virtual-machine/</guid>
       <description>Tiny Virtual Machine est un programme qui, en lisant un fichier source, va interpreter les commandes donnees par le-dit fichier.
 Chaque commande est constituee de quatre parties: une est l&amp;rsquo;opération, la deuxieme est l&amp;rsquo;emplacement dans le registre (0x00 - 0x10), la troisieme et quatrieme sont les nombres affectes par l&amp;rsquo;operation
 Les operations:
@@ -56,20 +56,20 @@ Les operations:
     
     <item>
       <title>SmartList</title>
-      <link>http://rachartier.github.io/code/smartlist/</link>
+      <link>https://rachartier.github.io/code/smartlist/</link>
       <pubDate>Wed, 05 Oct 2016 22:59:58 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/smartlist/</guid>
+      <guid>https://rachartier.github.io/code/smartlist/</guid>
       <description>Un programme qui cherche et complete une suite logique dans une liste de nombres donnes.
  Il faut tout d&amp;rsquo;abord executer le programme via &amp;ldquo;./smartlist&amp;rdquo; Ensuite, il faut entrer un nombre (N), ce qui permettra d&amp;rsquo;ecrire N termes. Enfin, il faut mettre une chaine de caracteres contenant la suite. Exemples: + &amp;ldquo;0 1 2&amp;rdquo; + &amp;ldquo;9 4&amp;rdquo; + &amp;ldquo;100 50 25&amp;rdquo; + &amp;ldquo;1 2 4&amp;rdquo; + &amp;ldquo;1 1&amp;rdquo; + &amp;hellip;  Execution:</description>
     </item>
     
     <item>
       <title>DansTonChatConsole</title>
-      <link>http://rachartier.github.io/code/danstonchatconsole/</link>
+      <link>https://rachartier.github.io/code/danstonchatconsole/</link>
       <pubDate>Sat, 25 Jul 2015 23:00:14 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/danstonchatconsole/</guid>
+      <guid>https://rachartier.github.io/code/danstonchatconsole/</guid>
       <description>DansTonChatConsole permet de voir les quotes du site &amp;ldquo;danstonchat.com&amp;rdquo; dans votre terminal. Compilation
 Si vous n&amp;rsquo;avez pas &amp;ldquo;libcurl&amp;rdquo; d&amp;rsquo;installer, entrez cette commande:
 sudo apt-get install libcurl3-dev Pour compiler:
@@ -78,10 +78,10 @@ gcc dtcconsole.c $(pkg-config --libs --cflags libcurl) -Wall -Wextra -o dtcconso
     
     <item>
       <title>Mutation</title>
-      <link>http://rachartier.github.io/code/mutation/</link>
+      <link>https://rachartier.github.io/code/mutation/</link>
       <pubDate>Mon, 23 Mar 2015 22:59:49 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/mutation/</guid>
+      <guid>https://rachartier.github.io/code/mutation/</guid>
       <description>Mutation est un programme qui calcule le gène gagant parmit N gènes.
 Il y a N gènes, admettons par exemple qu&amp;rsquo;il y en a 100.
 Chaque gène a donc 1% de chance d&amp;rsquo;être selectionné et d&amp;rsquo;être &amp;ldquo;sauvegardé&amp;rdquo; pour une prochaine génération de calcule. Plus le gène X est sauvegardé, plus il a de chance d&amp;rsquo;être tiré à la prochaine génération et donc d&amp;rsquo;être encore plus présent au fil des génération. C&amp;rsquo;est ce que l&amp;rsquo;on appel la mutation génétique.</description>
@@ -89,10 +89,10 @@ Chaque gène a donc 1% de chance d&amp;rsquo;être selectionné et d&amp;rsquo;�
     
     <item>
       <title>Horloge</title>
-      <link>http://rachartier.github.io/code/horloge/</link>
+      <link>https://rachartier.github.io/code/horloge/</link>
       <pubDate>Thu, 19 Feb 2015 22:59:53 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/horloge/</guid>
+      <guid>https://rachartier.github.io/code/horloge/</guid>
       <description>Une simple horloge qui vous donne l&amp;rsquo;heure en toutes lettres. Elle donne les secondes, minutes et heures en anglais.
 Image Code #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;time.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;math.h&amp;gt;#include &amp;lt;stdbool.h&amp;gt; struct s_position { int start; int end; }; struct s_digits { int decade; int unit; }; enum e_place { UNITS, MINUTES, HOURS }; typedef struct s_position POSITION; typedef struct s_digits DIGITS; typedef enum e_place PLACE; const char *digits[3] = { &amp;#34;TWENTYTHIRTYFORTYFIFTYZEROONETWOTHREEFORFIVESIXSEVENEIGHTNINETENELEVENTWELVEFIFTEEN SECONDS&amp;#34;, &amp;#34;TWENTYTHIRTYFORTYFIFTYZEROONETWOTHREEFORFIVESIXSEVENEIGHTNINETENELEVENTWELVEFIFTEEN MINUTES&amp;#34;, &amp;#34;ZEROONETWOTHREEFORFIVESIXSEVENEIGHTNINETENELEVENTWELVE HOURS&amp;#34; }; const char *numToWord[19] = { &amp;#34;ZERO&amp;#34;, &amp;#34;ONE&amp;#34;, &amp;#34;TWO&amp;#34;, &amp;#34;THREE&amp;#34;, &amp;#34;FOR&amp;#34;, &amp;#34;FIVE&amp;#34;, &amp;#34;SIX&amp;#34;, &amp;#34;SEVEN&amp;#34;, &amp;#34;EIGHT&amp;#34;, &amp;#34;NINE&amp;#34;, &amp;#34;TEN&amp;#34;, &amp;#34;ELEVEN&amp;#34;, &amp;#34;TWELVE&amp;#34;, &amp;#34;TWENTY&amp;#34;, &amp;#34;THIRTY&amp;#34;, &amp;#34;FORTY&amp;#34;, &amp;#34;FIFTY&amp;#34;, &amp;#34;TEEN&amp;#34;, &amp;#34;FIFTEEN&amp;#34; }; void wait(int time) { clock_t end = clock() + (time * CLOCKS_PER_SEC); while(clock()&amp;lt; end); } POSITION get_wordPos(const char *word, PLACE where, bool decade) { POSITION position = {.</description>
     </item>

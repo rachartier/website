@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Raphaël CHARTIER</title>
-    <link>http://rachartier.github.io/</link>
+    <link>https://rachartier.github.io/</link>
     <description>Recent content on Raphaël CHARTIER</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 07 Jul 2020 01:00:00 +0200</lastBuildDate><atom:link href="http://rachartier.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jul 2020 01:00:00 +0200</lastBuildDate><atom:link href="https://rachartier.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chords</title>
-      <link>http://rachartier.github.io/projet/chords/</link>
+      <link>https://rachartier.github.io/projet/chords/</link>
       <pubDate>Tue, 07 Jul 2020 01:00:00 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/chords/</guid>
+      <guid>https://rachartier.github.io/projet/chords/</guid>
       <description>Application Android fait en Kotlin realisée pour un projet de Licence Informatique. Permet de récupérer et visualiser des accords à la guitare.
 Recherche d&amp;rsquo;un accord et les accords de l&amp;rsquo;utilisateur en favoris Résultat de la recherche Détail de l&amp;rsquo;accord </description>
     </item>
     
     <item>
       <title>DansTonTrump</title>
-      <link>http://rachartier.github.io/projet/danstontrump/</link>
+      <link>https://rachartier.github.io/projet/danstontrump/</link>
       <pubDate>Tue, 07 Jul 2020 01:00:00 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/danstontrump/</guid>
+      <guid>https://rachartier.github.io/projet/danstontrump/</guid>
       <description>Lien Github
 DansTonTrump Description du sujet Projet de Licence Informatique sur Sailfish reprennant DansTonChat mais avec les quotes de Trump (C++/QML)
 Ce projet permet de visualiser les meilleurs citations de Donald Trump et de pouvoir en personnaliser avec le nom de votre choix !
@@ -33,20 +33,20 @@ Il se décompose en 4 pages:
     
     <item>
       <title>HAL</title>
-      <link>http://rachartier.github.io/projet/hal/</link>
+      <link>https://rachartier.github.io/projet/hal/</link>
       <pubDate>Tue, 07 Jul 2020 00:00:00 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/hal/</guid>
+      <guid>https://rachartier.github.io/projet/hal/</guid>
       <description>Lien Github
 Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     Choix Installations  Serveur  Docker  Exigence Installation avec Docker   Installation Manuelle  Installation     Client  Installation Manuelle     Serveur Docker Documentation  Docker-Compose du serveur  Volumes du serveur Variables d&amp;rsquo;environnement   Mise à jour du Docker InfluxDB  Présentation Installation InfluxDB Volumes InfluxDB InfluxDB API InfluxQL Liaison avec HAL   Grafana  Présentation Grafana Installation Grafana Volumes Grafana Présentation rapide de l&amp;rsquo;interface  Data Source   Grafana et InfluxQL   Tout-en-un   Serveur Installation Manuelle  Installation Manuelle Linux Installation Manuelle Windows   Client Installation  Installation Manuelle Linux Installation Manuelle Windows Configuration  Comprendre config.</description>
     </item>
     
     <item>
       <title>CComanche</title>
-      <link>http://rachartier.github.io/code/ccomanche/</link>
+      <link>https://rachartier.github.io/code/ccomanche/</link>
       <pubDate>Wed, 11 Mar 2020 23:00:35 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/ccomanche/</guid>
+      <guid>https://rachartier.github.io/code/ccomanche/</guid>
       <description>Lien Github
 Petit projet qui permet de &amp;ldquo;voler&amp;rdquo; dans un vaisseau en s&amp;rsquo;inspirant du moteur du jeu &amp;ldquo;Comanche&amp;rdquo;.
 Le terrain est un terrain infini, avec plusieurs niveaux disponibles. Le moteur de jeu est très simple. 2 images permettent de répresenter le niveau: - Une image de couleurs - Une image en noir et blanc représentant la hauteur du terrain
@@ -55,39 +55,39 @@ Ces deux images alors combinées permettent la création d&amp;rsquo;un niveau. 
     
     <item>
       <title>CV</title>
-      <link>http://rachartier.github.io/cv/</link>
+      <link>https://rachartier.github.io/cv/</link>
       <pubDate>Sun, 07 Apr 2019 00:36:29 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/cv/</guid>
+      <guid>https://rachartier.github.io/cv/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dynamo</title>
-      <link>http://rachartier.github.io/projet/dynamo/</link>
+      <link>https://rachartier.github.io/projet/dynamo/</link>
       <pubDate>Wed, 06 Feb 2019 23:56:47 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/dynamo/</guid>
+      <guid>https://rachartier.github.io/projet/dynamo/</guid>
       <description>Liens Github [PlayStore] (https://play.google.com/store/apps/details?id=iut.ipi.runnergame&amp;amp;hl=fr_CH&amp;amp;gl=US)
 Dynamo est un jeu de plateforme liant agilité et vitesse pour parvenir à bout d&amp;rsquo;un unique niveau, long et remplit de pièges. Le jeu est 2d-scroller, ce qui signifie que le héros peut se déplacer à droite, gauche et sauter. Le but est donc de faire le plus gros score pour concurrencer ses amis. Pour faire le plus haut score, il faut récupérer un maximum de pièces et aller le plus vite possible sans se faire tuer par le boss ou tomber des plateformes…</description>
     </item>
     
     <item>
       <title>Pokemon Du Pauvre</title>
-      <link>http://rachartier.github.io/projet/pokemon-du-pauvre/</link>
+      <link>https://rachartier.github.io/projet/pokemon-du-pauvre/</link>
       <pubDate>Wed, 14 Nov 2018 22:57:02 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/pokemon-du-pauvre/</guid>
+      <guid>https://rachartier.github.io/projet/pokemon-du-pauvre/</guid>
       <description>Jeu ressemblant aux fameux jeux Pokemon, ce &amp;ldquo;pokemon du pauvre&amp;rdquo; vise à creer une expérience simple. Le joueur peut consulter la liste de nombreux pokemons dans le pokdex, visiter des terrains générés aléatoirements, écouter la musique des premiers jeux tout en combattant des pokemons adverses pour au final les capturer. Le jeu dispose aussi de sauvegardes et de chargement de ces dernières.
  Fait en 7 semaines lors d&amp;rsquo;un projet de programmation orientée objet en 2éme année d&amp;rsquo;IUT Informartique Fait en JavaFX Respecte au maximum le principe SOLID Musiques originales Niveaux générés aléatoiements Toute la 1ère génération de Pokemon est présente Sauvegarde/chargement  Lien Github</description>
     </item>
     
     <item>
       <title>Truth Table</title>
-      <link>http://rachartier.github.io/code/truth-table/</link>
+      <link>https://rachartier.github.io/code/truth-table/</link>
       <pubDate>Tue, 07 Nov 2017 23:00:35 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/truth-table/</guid>
+      <guid>https://rachartier.github.io/code/truth-table/</guid>
       <description>Générateur de table de vérité avec la notation polonaise inverse.
 L&amp;rsquo;utilisation se fait via la ligne de commande:
 gcc truthtable.c -Wall -Wextra -std=c11 -lm -o ttable ./ttable &amp;quot;expression&amp;quot; L&amp;rsquo;expression doit être une expression ecrite via la notation polonaise inverse comme suit:
@@ -96,20 +96,20 @@ gcc truthtable.c -Wall -Wextra -std=c11 -lm -o ttable ./ttable &amp;quot;express
     
     <item>
       <title>Pendule Double</title>
-      <link>http://rachartier.github.io/code/pendule-double/</link>
+      <link>https://rachartier.github.io/code/pendule-double/</link>
       <pubDate>Mon, 23 Jan 2017 23:00:18 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/pendule-double/</guid>
+      <guid>https://rachartier.github.io/code/pendule-double/</guid>
       <description>Pendule Double est la simulation de &amp;ldquo;l&amp;rsquo;aleatoire chaotique&amp;rdquo; en utilisant un pendule relie a un dernier, qui est fixe.
 Compilation gcc doublependulum.c -o doublependulum -lm -Wall -Wextra -lSDL2 -lSDL2main Commandes  a: diminue la taille du premier pendule | z: augmente la taille du premier pendule e: diminue la taille du second pendule | r: augmente la taille du second pendule q: diminue la masse du premier pendule | s: augmente la masse du premier pendule d: diminue la masse du second pendule | f: augmente la masse du second pendule i: affiche les informations des pendules dans la console n: permet de reinitialiser aléatoirement les pendules  Vidéo Vidéo de démonstration</description>
     </item>
     
     <item>
       <title>Tiny Virtual Machine</title>
-      <link>http://rachartier.github.io/code/tiny-virtual-machine/</link>
+      <link>https://rachartier.github.io/code/tiny-virtual-machine/</link>
       <pubDate>Wed, 05 Oct 2016 23:00:08 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/code/tiny-virtual-machine/</guid>
+      <guid>https://rachartier.github.io/code/tiny-virtual-machine/</guid>
       <description>Tiny Virtual Machine est un programme qui, en lisant un fichier source, va interpreter les commandes donnees par le-dit fichier.
 Chaque commande est constituee de quatre parties: une est l&amp;rsquo;opération, la deuxieme est l&amp;rsquo;emplacement dans le registre (0x00 - 0x10), la troisieme et quatrieme sont les nombres affectes par l&amp;rsquo;operation
 Les operations:

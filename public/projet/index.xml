@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projets on Raphaël CHARTIER</title>
-    <link>http://rachartier.github.io/projet/</link>
+    <link>https://rachartier.github.io/projet/</link>
     <description>Recent content in Projets on Raphaël CHARTIER</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 07 Jul 2020 01:00:00 +0200</lastBuildDate><atom:link href="http://rachartier.github.io/projet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jul 2020 01:00:00 +0200</lastBuildDate><atom:link href="https://rachartier.github.io/projet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chords</title>
-      <link>http://rachartier.github.io/projet/chords/</link>
+      <link>https://rachartier.github.io/projet/chords/</link>
       <pubDate>Tue, 07 Jul 2020 01:00:00 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/chords/</guid>
+      <guid>https://rachartier.github.io/projet/chords/</guid>
       <description>Application Android fait en Kotlin realisée pour un projet de Licence Informatique. Permet de récupérer et visualiser des accords à la guitare.
 Recherche d&amp;rsquo;un accord et les accords de l&amp;rsquo;utilisateur en favoris Résultat de la recherche Détail de l&amp;rsquo;accord </description>
     </item>
     
     <item>
       <title>DansTonTrump</title>
-      <link>http://rachartier.github.io/projet/danstontrump/</link>
+      <link>https://rachartier.github.io/projet/danstontrump/</link>
       <pubDate>Tue, 07 Jul 2020 01:00:00 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/danstontrump/</guid>
+      <guid>https://rachartier.github.io/projet/danstontrump/</guid>
       <description>Lien Github
 DansTonTrump Description du sujet Projet de Licence Informatique sur Sailfish reprennant DansTonChat mais avec les quotes de Trump (C++/QML)
 Ce projet permet de visualiser les meilleurs citations de Donald Trump et de pouvoir en personnaliser avec le nom de votre choix !
@@ -33,50 +33,50 @@ Il se décompose en 4 pages:
     
     <item>
       <title>HAL</title>
-      <link>http://rachartier.github.io/projet/hal/</link>
+      <link>https://rachartier.github.io/projet/hal/</link>
       <pubDate>Tue, 07 Jul 2020 00:00:00 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/hal/</guid>
+      <guid>https://rachartier.github.io/projet/hal/</guid>
       <description>Lien Github
 Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     Choix Installations  Serveur  Docker  Exigence Installation avec Docker   Installation Manuelle  Installation     Client  Installation Manuelle     Serveur Docker Documentation  Docker-Compose du serveur  Volumes du serveur Variables d&amp;rsquo;environnement   Mise à jour du Docker InfluxDB  Présentation Installation InfluxDB Volumes InfluxDB InfluxDB API InfluxQL Liaison avec HAL   Grafana  Présentation Grafana Installation Grafana Volumes Grafana Présentation rapide de l&amp;rsquo;interface  Data Source   Grafana et InfluxQL   Tout-en-un   Serveur Installation Manuelle  Installation Manuelle Linux Installation Manuelle Windows   Client Installation  Installation Manuelle Linux Installation Manuelle Windows Configuration  Comprendre config.</description>
     </item>
     
     <item>
       <title>Dynamo</title>
-      <link>http://rachartier.github.io/projet/dynamo/</link>
+      <link>https://rachartier.github.io/projet/dynamo/</link>
       <pubDate>Wed, 06 Feb 2019 23:56:47 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/dynamo/</guid>
+      <guid>https://rachartier.github.io/projet/dynamo/</guid>
       <description>Liens Github [PlayStore] (https://play.google.com/store/apps/details?id=iut.ipi.runnergame&amp;amp;hl=fr_CH&amp;amp;gl=US)
 Dynamo est un jeu de plateforme liant agilité et vitesse pour parvenir à bout d&amp;rsquo;un unique niveau, long et remplit de pièges. Le jeu est 2d-scroller, ce qui signifie que le héros peut se déplacer à droite, gauche et sauter. Le but est donc de faire le plus gros score pour concurrencer ses amis. Pour faire le plus haut score, il faut récupérer un maximum de pièces et aller le plus vite possible sans se faire tuer par le boss ou tomber des plateformes…</description>
     </item>
     
     <item>
       <title>Pokemon Du Pauvre</title>
-      <link>http://rachartier.github.io/projet/pokemon-du-pauvre/</link>
+      <link>https://rachartier.github.io/projet/pokemon-du-pauvre/</link>
       <pubDate>Wed, 14 Nov 2018 22:57:02 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/pokemon-du-pauvre/</guid>
+      <guid>https://rachartier.github.io/projet/pokemon-du-pauvre/</guid>
       <description>Jeu ressemblant aux fameux jeux Pokemon, ce &amp;ldquo;pokemon du pauvre&amp;rdquo; vise à creer une expérience simple. Le joueur peut consulter la liste de nombreux pokemons dans le pokdex, visiter des terrains générés aléatoirements, écouter la musique des premiers jeux tout en combattant des pokemons adverses pour au final les capturer. Le jeu dispose aussi de sauvegardes et de chargement de ces dernières.
  Fait en 7 semaines lors d&amp;rsquo;un projet de programmation orientée objet en 2éme année d&amp;rsquo;IUT Informartique Fait en JavaFX Respecte au maximum le principe SOLID Musiques originales Niveaux générés aléatoiements Toute la 1ère génération de Pokemon est présente Sauvegarde/chargement  Lien Github</description>
     </item>
     
     <item>
       <title>Galaxy</title>
-      <link>http://rachartier.github.io/projet/galaxy/</link>
+      <link>https://rachartier.github.io/projet/galaxy/</link>
       <pubDate>Fri, 11 Sep 2015 22:57:26 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/galaxy/</guid>
+      <guid>https://rachartier.github.io/projet/galaxy/</guid>
       <description>GalaxY est un jeu en console d&amp;rsquo;aventure et d&amp;rsquo;exploration spatiale.
 Vous traversez les galaxies a bord de votre vaisseau en passant par differents systemes planetaires generes aleatoirement. Durant le trajet, vous pourrez fouiller et decouvrir des tresors sur les planetes rencontrees, et commercer avec ces dernieres pour recuperer des marchandises de base (nourriture, eau, fuel) mais aussi pour recruter du personnel sur votre vaisseau. En plus de leur commerce, les planetes possedent leur propre regime politique allant de la simple republique a la monarchie en passant par la dictature.</description>
     </item>
     
     <item>
       <title>FlappyTXT</title>
-      <link>http://rachartier.github.io/projet/flappytxt/</link>
+      <link>https://rachartier.github.io/projet/flappytxt/</link>
       <pubDate>Sun, 15 Feb 2015 22:57:34 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/flappytxt/</guid>
+      <guid>https://rachartier.github.io/projet/flappytxt/</guid>
       <description>FlappyTXT est un petit jeu Windows créé pour le fun dans le but d’avoir un n-iéme clone de ce fameux jeu.
 Le principe est vraiment très simple, il suffit d’entrer des commandes pour faire bouger le petit oiseau. Des commandes telles que:
  “DOWN n” pour faire descendre l’oiseau de n case “UP n” pour faire monter l’oiseau de n case “EXIT” quitte le jeu “HELP” l’aide  Comme pour l’originale , il suffit de faire passer l’oiseau dans le trou pour gagner un point.</description>
@@ -84,30 +84,30 @@ Le principe est vraiment très simple, il suffit d’entrer des commandes pour f
     
     <item>
       <title>Pixuzzle</title>
-      <link>http://rachartier.github.io/projet/pixuzzle/</link>
+      <link>https://rachartier.github.io/projet/pixuzzle/</link>
       <pubDate>Tue, 11 Feb 2014 22:57:37 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/pixuzzle/</guid>
+      <guid>https://rachartier.github.io/projet/pixuzzle/</guid>
       <description>Pixuzzle est un jeu de réflexion/réflexe où le but est de faire le plus haut score. Pour ça il faut &amp;ldquo;exploser&amp;rdquo; des carrés de différentes couleurs:
  Rouge Vert Bleu Violet Blanc Bleu clair Rouge clair Vert clair Bleu foncé  A chaque fois que vous appuyez sur un Pixel, celui-ci détruit tous les Pixels de même couleur le touchant. De ce fait, il faut les empêcher de s&amp;rsquo;empiler, car une fois qu&amp;rsquo;un seul des Pixels touche le haut de l&amp;rsquo;écran, vous avez perdu la partie.</description>
     </item>
     
     <item>
       <title>Blue and White</title>
-      <link>http://rachartier.github.io/projet/blue-and-white/</link>
+      <link>https://rachartier.github.io/projet/blue-and-white/</link>
       <pubDate>Sat, 07 Dec 2013 22:57:43 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/blue-and-white/</guid>
+      <guid>https://rachartier.github.io/projet/blue-and-white/</guid>
       <description>Blue and White est un jeu où le but est de remplir toutes les cases en bleu, c&amp;rsquo;est simple de principe, mais dur de réalisation. Dès que vous cliquez sur une &amp;ldquo;case&amp;rdquo;, cette case devient imédiatement bleu ainsi que celle de gauche, droite, haut et bas. Mais le problème, c&amp;rsquo;est que si cette case est déjà bleu, elle redevient normale, c&amp;rsquo;est-à-dire blanche.
 Vous pouvez choisir la taille de la map (1 à 100), afficher le temps, voir le nombre de coups dont vous avez eu besoin pour gagner, générer aléatoirement une map.</description>
     </item>
     
     <item>
       <title>ASCII_PhysiX</title>
-      <link>http://rachartier.github.io/projet/ascii_physix/</link>
+      <link>https://rachartier.github.io/projet/ascii_physix/</link>
       <pubDate>Sun, 14 Apr 2013 22:57:58 +0200</pubDate>
       
-      <guid>http://rachartier.github.io/projet/ascii_physix/</guid>
+      <guid>https://rachartier.github.io/projet/ascii_physix/</guid>
       <description>ASCII_Physix est une sorte de &amp;ldquo;simulation&amp;rdquo; sous un émulateur de terminal. Il permet de poser différents blocs avec différentes caractéristiques disposés en 3 classes:
  BLOCKS, qui contient des blocs tels que des grilles, blocs durs&amp;hellip; DUST, qui contient la poussiéres, la terre&amp;hellip;  Il existe un fichier .opt pour modifier les caractéristiques de la map. On peut changer sa taille, le caractère des murs&amp;hellip;
 Lien Github</description>
