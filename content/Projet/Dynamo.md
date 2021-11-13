@@ -8,7 +8,7 @@ images:
 
 ## Liens
 [Github](https://github.com/rachartier/Dynamo)
-[PlayStore] (https://play.google.com/store/apps/details?id=iut.ipi.runnergame&hl=fr_CH&gl=US)
+[PlayStore](https://play.google.com/store/apps/details?id=iut.ipi.runnergame&hl=fr_CH&gl=US)
 
 Dynamo est un jeu de plateforme liant agilité et vitesse pour parvenir à bout d'un unique niveau, long et remplit de pièges. Le jeu est 2d-scroller, ce qui signifie que le héros peut se déplacer à droite, gauche et sauter. Le but est donc de faire le plus gros score pour concurrencer ses amis. Pour faire le plus haut score, il faut récupérer un maximum de pièces et aller le plus vite possible sans se faire tuer par le boss ou tomber des plateformes…
 
