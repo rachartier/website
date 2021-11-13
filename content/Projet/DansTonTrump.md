@@ -41,9 +41,4 @@ le lien à l'API.
 
 - La fonctionnalité *Personalized Quote* qui permet de compléter une fameuse citation de Donald Trump avec le nom de votre choix!
 
-## Bugs connus
-
-* RAS (pour l'instant)
-
-[Vue de l'application](doc/DTTmockupPDF.pdf)
 
