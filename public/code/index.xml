@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 07 Nov 2017 23:00:35 +0200</lastBuildDate><atom:link href="http://rachartier.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Mar 2020 23:00:35 +0200</lastBuildDate><atom:link href="http://rachartier.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Truth Table</title>
+      <link>http://rachartier.github.io/code/ccomanche/</link>
+      <pubDate>Wed, 11 Mar 2020 23:00:35 +0200</pubDate>
+      
+      <guid>http://rachartier.github.io/code/ccomanche/</guid>
+      <description>Lien Github
+Petit projet qui permet de &amp;ldquo;voler&amp;rdquo; dans un vaisseau en s&amp;rsquo;inspirant du moteur du jeu &amp;ldquo;Comanche&amp;rdquo;.
+Le terrain est un terrain infini, avec plusieurs niveaux disponibles. Le moteur de jeu est très simple. 2 images permettent de répresenter le niveau: - Une image de couleurs - Une image en noir et blanc représentant la hauteur du terrain
+Ces deux images alors combinées permettent la création d&amp;rsquo;un niveau. L&amp;rsquo;algorithme utilisé va alors scanner les différents pixels en partant de la fin, puis se rapprocher avec un certain delta à chaque itération du joueur.</description>
+    </item>
+    
     <item>
       <title>Truth Table</title>
       <link>http://rachartier.github.io/code/truth-table/</link>

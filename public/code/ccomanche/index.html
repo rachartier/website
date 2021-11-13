@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="Truth Table">
+<meta itemprop="description" content="Lien Github
+Petit projet qui permet de &ldquo;voler&rdquo; dans un vaisseau en s&rsquo;inspirant du moteur du jeu &ldquo;Comanche&rdquo;.
+Le terrain est un terrain infini, avec plusieurs niveaux disponibles. Le moteur de jeu est très simple. 2 images permettent de répresenter le niveau: - Une image de couleurs - Une image en noir et blanc représentant la hauteur du terrain
+Ces deux images alors combinées permettent la création d&rsquo;un niveau. L&rsquo;algorithme utilisé va alors scanner les différents pixels en partant de la fin, puis se rapprocher avec un certain delta à chaque itération du joueur."><meta itemprop="datePublished" content="2020-03-11T23:00:35+02:00" />
+<meta itemprop="dateModified" content="2020-03-11T23:00:35+02:00" />
+<meta itemprop="wordCount" content="1125">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Truth Table" />
+<meta property="og:description" content="Lien Github
+Petit projet qui permet de &ldquo;voler&rdquo; dans un vaisseau en s&rsquo;inspirant du moteur du jeu &ldquo;Comanche&rdquo;.
+Le terrain est un terrain infini, avec plusieurs niveaux disponibles. Le moteur de jeu est très simple. 2 images permettent de répresenter le niveau: - Une image de couleurs - Une image en noir et blanc représentant la hauteur du terrain
+Ces deux images alors combinées permettent la création d&rsquo;un niveau. L&rsquo;algorithme utilisé va alors scanner les différents pixels en partant de la fin, puis se rapprocher avec un certain delta à chaque itération du joueur." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://rachartier.github.io/code/ccomanche/" /><meta property="article:section" content="Code" />
+<meta property="article:published_time" content="2020-03-11T23:00:35+02:00" />
+<meta property="article:modified_time" content="2020-03-11T23:00:35+02:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Truth Table"/>
+<meta name="twitter:description" content="Lien Github
+Petit projet qui permet de &ldquo;voler&rdquo; dans un vaisseau en s&rsquo;inspirant du moteur du jeu &ldquo;Comanche&rdquo;.
+Le terrain est un terrain infini, avec plusieurs niveaux disponibles. Le moteur de jeu est très simple. 2 images permettent de répresenter le niveau: - Une image de couleurs - Une image en noir et blanc représentant la hauteur du terrain
+Ces deux images alors combinées permettent la création d&rsquo;un niveau. L&rsquo;algorithme utilisé va alors scanner les différents pixels en partant de la fin, puis se rapprocher avec un certain delta à chaque itération du joueur."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Truth Table</title>
+	<link rel="stylesheet" href="http://rachartier.github.io/css/style.min.e2fe7e54bfbf89a16286c4371d6e7207a337113835ab028601bd4768497baf52.css" integrity="sha256-4v5+VL+/iaFihsQ3HW5yB6M3ETg1qwKGAb1HaEl7r1I=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="http://rachartier.github.io/">Raphaël CHARTIER</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="http://rachartier.github.io/projet/">Projets</a>
+				<a href="http://rachartier.github.io/code/">Codes</a>
+				<a href="http://rachartier.github.io/cv/">CV</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://www.linkedin.com/in/rapha%C3%ABl-chartier-3916581ab/" target="_blank" rel="noopener me" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="https://github.com/rachartier" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="http://rachartier.github.io/projet/">Projets</a></li>
+			<li><a href="http://rachartier.github.io/code/">Codes</a></li>
+			<li><a href="http://rachartier.github.io/cv/">CV</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner thin animated fadeIn faster">
+		<h1>Truth Table</h1>
+		<div class="content">
+			<h2 id="lien">Lien<a href="#lien" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p><a href="https://github.com/rachartier/CComanche">Github</a></p>
+<p>Petit projet qui permet de &ldquo;voler&rdquo; dans un vaisseau en s&rsquo;inspirant du moteur du jeu &ldquo;Comanche&rdquo;.</p>
+<p>Le terrain est un terrain infini, avec plusieurs niveaux disponibles.
+Le moteur de jeu est très simple. 2 images permettent de répresenter le niveau:
+- Une image de couleurs
+- Une image en noir et blanc représentant la hauteur du terrain</p>
+<p>Ces deux images alors combinées permettent la création d&rsquo;un niveau. L&rsquo;algorithme utilisé va alors scanner les différents pixels en partant de la fin, puis se rapprocher avec un certain delta à chaque itération du joueur. Les lignes sont alors tracées verticalements, et cela va donner une impression de profondeur. Tout cela répété 60 fois par seconde et on obtient un jeu fluide où l&rsquo;on peut se déplacer librement dans un monde infini.</p>
+<p>Le projet doit être compilé avec la SDL2.</p>
+<h2 id="code">Code<a href="#code" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;SDL2/SDL.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;SDL2/SDL_image.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;SDL2/SDL2_framerate.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="cp">#define SCREEN_HEIGHT 480
+</span><span class="cp">#define SCREEN_WIDTH 640
+</span><span class="cp">#define FPS 60
+</span><span class="cp"></span>
+<span class="cp">#define PRECISION 0.01
+</span><span class="cp">#define DEADZONE 10
+</span><span class="cp"></span>
+<span class="cp">#define TURNING_SPEED 0.9
+</span><span class="cp">#define CAMERA_SPEED 150.0
+</span><span class="cp"></span>
+<span class="k">struct</span> <span class="n">point_t</span> <span class="p">{</span>
+    <span class="kt">float</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">camera_t</span> <span class="p">{</span>
+    <span class="k">struct</span> <span class="n">point_t</span> <span class="n">position</span><span class="p">;</span>
+
+    <span class="kt">float</span> <span class="n">height</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">angle</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">distance</span><span class="p">;</span>
+    
+    <span class="kt">float</span> <span class="n">horizon</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">ship_t</span> <span class="p">{</span>
+    <span class="kt">float</span> <span class="n">x_speed</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">y_speed</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">map_t</span> <span class="p">{</span>
+    <span class="n">SDL_Surface</span> <span class="o">*</span><span class="n">img_heightmap</span><span class="p">;</span>
+    <span class="n">SDL_Surface</span> <span class="o">*</span><span class="n">img_colormap</span><span class="p">;</span>
+
+    <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">heightmap</span><span class="p">;</span>
+    <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">colormap</span><span class="p">;</span>
+
+    <span class="kt">unsigned</span> <span class="n">width</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="n">height</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="n">shift</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">screen_t</span> <span class="p">{</span>
+    <span class="n">SDL_Renderer</span> <span class="o">*</span><span class="n">renderer</span><span class="p">;</span>
+    <span class="kt">unsigned</span>     <span class="n">ybuffer</span><span class="p">[</span><span class="n">SCREEN_WIDTH</span><span class="p">];</span>
+    <span class="kt">uint8_t</span>      <span class="n">buffer</span><span class="p">[</span><span class="n">SCREEN_WIDTH</span> <span class="o">*</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">*</span> <span class="mi">3</span><span class="p">];</span>
+    <span class="kt">uint8_t</span>      <span class="n">blank</span><span class="p">[</span><span class="n">SCREEN_WIDTH</span> <span class="o">*</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">*</span> <span class="mi">3</span><span class="p">];</span>
+
+    <span class="kt">int</span> <span class="n">height</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">width</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">uint32_t</span> <span class="nf">getpixel</span><span class="p">(</span><span class="n">SDL_Surface</span> <span class="o">*</span><span class="n">surface</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="o">*</span><span class="p">((</span><span class="n">Uint8</span> <span class="o">*</span><span class="p">)</span><span class="n">surface</span><span class="o">-&gt;</span><span class="n">pixels</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">surface</span><span class="o">-&gt;</span><span class="n">pitch</span> <span class="o">+</span> <span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">uint8_t</span> <span class="o">*</span><span class="nf">load_img_into_map</span><span class="p">(</span><span class="n">SDL_Surface</span> <span class="o">*</span><span class="n">img</span><span class="p">,</span> <span class="k">struct</span> <span class="n">map_t</span> <span class="o">*</span><span class="n">map</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="n">map</span><span class="o">-&gt;</span><span class="n">width</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="n">map</span><span class="o">-&gt;</span><span class="n">height</span><span class="p">;</span>
+
+    <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">arr</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">w</span> <span class="o">*</span> <span class="n">h</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">arr</span><span class="p">));</span>
+
+    <span class="n">SDL_LockSurface</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">w</span><span class="p">;</span> <span class="o">++</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">h</span><span class="p">;</span> <span class="o">++</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="p">[</span><span class="n">y</span> <span class="o">*</span> <span class="n">h</span> <span class="o">+</span> <span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">getpixel</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>  
+        <span class="p">}</span>
+    <span class="p">}</span> 
+    <span class="n">SDL_UnlockSurface</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="n">arr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">load_map</span><span class="p">(</span><span class="k">struct</span> <span class="n">map_t</span> <span class="o">*</span><span class="n">map</span><span class="p">,</span> <span class="kt">int</span> <span class="n">level_number</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">level</span><span class="p">[][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+       <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">12</span><span class="p">,</span><span class="mi">11</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">13</span><span class="p">,</span><span class="mi">13</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">14</span><span class="p">,</span><span class="mi">14</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="mi">16</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">17</span><span class="p">,</span><span class="mi">17</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">18</span><span class="p">,</span><span class="mi">18</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">19</span><span class="p">,</span><span class="mi">19</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">21</span><span class="p">,</span><span class="mi">21</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">22</span><span class="p">,</span><span class="mi">22</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">23</span><span class="p">,</span><span class="mi">21</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">24</span><span class="p">,</span><span class="mi">24</span><span class="p">},</span>
+       <span class="p">{</span><span class="mi">25</span><span class="p">,</span><span class="mi">25</span><span class="p">},</span>
+    <span class="p">};</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">img_heightmap</span><span class="p">)</span>
+        <span class="n">SDL_FreeSurface</span><span class="p">(</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">img_heightmap</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">img_colormap</span><span class="p">)</span>
+        <span class="n">SDL_FreeSurface</span><span class="p">(</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">img_colormap</span><span class="p">);</span>
+
+    <span class="kt">char</span> <span class="n">buf_color</span><span class="p">[</span><span class="mi">64</span><span class="p">];</span>
+    <span class="kt">char</span> <span class="n">buf_height</span><span class="p">[</span><span class="mi">64</span><span class="p">];</span>
+
+    <span class="n">sprintf</span><span class="p">(</span><span class="n">buf_color</span><span class="p">,</span> <span class="s">&#34;./color_map/C%dW.png&#34;</span><span class="p">,</span> <span class="n">level</span><span class="p">[</span><span class="n">level_number</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="n">sprintf</span><span class="p">(</span><span class="n">buf_height</span><span class="p">,</span> <span class="s">&#34;./height_map/D%d.png&#34;</span><span class="p">,</span> <span class="n">level</span><span class="p">[</span><span class="n">level_number</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
+    
+    <span class="n">map</span><span class="o">-&gt;</span><span class="n">img_heightmap</span> <span class="o">=</span> <span class="n">IMG_Load</span><span class="p">(</span><span class="n">buf_height</span><span class="p">);</span>
+    <span class="n">map</span><span class="o">-&gt;</span><span class="n">img_colormap</span> <span class="o">=</span> <span class="n">IMG_Load</span><span class="p">(</span><span class="n">buf_color</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">img_colormap</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">buf_color</span><span class="p">,</span> <span class="s">&#34;./color_map/C%d.png&#34;</span><span class="p">,</span> <span class="n">level</span><span class="p">[</span><span class="n">level_number</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="n">map</span><span class="o">-&gt;</span><span class="n">img_colormap</span> <span class="o">=</span> <span class="n">IMG_Load</span><span class="p">(</span><span class="n">buf_color</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">colormap</span><span class="p">)</span>
+        <span class="n">free</span><span class="p">(</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">colormap</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">heightmap</span><span class="p">)</span>
+        <span class="n">free</span><span class="p">(</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">heightmap</span><span class="p">);</span>
+
+    <span class="n">map</span><span class="o">-&gt;</span><span class="n">colormap</span> <span class="o">=</span> <span class="n">load_img_into_map</span><span class="p">(</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">img_colormap</span><span class="p">,</span> <span class="n">map</span><span class="p">);</span>
+    <span class="n">map</span><span class="o">-&gt;</span><span class="n">heightmap</span> <span class="o">=</span> <span class="n">load_img_into_map</span><span class="p">(</span><span class="n">map</span><span class="o">-&gt;</span><span class="n">img_heightmap</span><span class="p">,</span> <span class="n">map</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">uint8_t</span> <span class="nf">get_value_map</span><span class="p">(</span><span class="k">struct</span> <span class="n">map_t</span> <span class="o">*</span><span class="n">map</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">arr</span><span class="p">[</span><span class="n">y</span> <span class="o">*</span> <span class="n">map</span><span class="o">-&gt;</span><span class="n">height</span> <span class="o">+</span> <span class="n">x</span><span class="p">];</span>  
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw_vline</span><span class="p">(</span><span class="k">struct</span> <span class="n">screen_t</span> <span class="o">*</span><span class="n">screen</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">g</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">length</span> <span class="o">&amp;&amp;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">screen</span><span class="o">-&gt;</span><span class="n">height</span><span class="p">;</span> <span class="o">++</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">unsigned</span> <span class="n">offset</span> <span class="o">=</span> <span class="p">(</span><span class="n">screen</span><span class="o">-&gt;</span><span class="n">width</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="n">screen</span><span class="o">-&gt;</span><span class="n">buffer</span><span class="p">[</span><span class="n">offset</span> <span class="o">+</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span><span class="p">;</span>
+        <span class="n">screen</span><span class="o">-&gt;</span><span class="n">buffer</span><span class="p">[</span><span class="n">offset</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span><span class="p">;</span>
+        <span class="n">screen</span><span class="o">-&gt;</span><span class="n">buffer</span><span class="p">[</span><span class="n">offset</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+    <span class="p">}</span> 
+<span class="p">}</span> 
+
+<span class="kt">void</span> <span class="nf">render</span><span class="p">(</span><span class="k">struct</span> <span class="n">screen_t</span> <span class="o">*</span><span class="n">screen</span><span class="p">,</span>
+            <span class="k">struct</span> <span class="n">camera_t</span> <span class="o">*</span><span class="n">camera</span><span class="p">,</span> 
+            <span class="k">struct</span> <span class="n">map_t</span> <span class="o">*</span><span class="n">map</span><span class="p">,</span> <span class="kt">float</span> <span class="n">scale_height</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kt">float</span> <span class="n">sinphi</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">camera</span><span class="o">-&gt;</span><span class="n">angle</span><span class="p">);</span>
+    <span class="kt">float</span> <span class="n">cosphi</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">camera</span><span class="o">-&gt;</span><span class="n">angle</span><span class="p">);</span>
+    
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">screen</span><span class="o">-&gt;</span><span class="n">width</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">screen</span><span class="o">-&gt;</span><span class="n">ybuffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">screen</span><span class="o">-&gt;</span><span class="n">height</span><span class="p">;</span> 
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">screen</span><span class="o">-&gt;</span><span class="n">height</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">unsigned</span> <span class="n">offset</span> <span class="o">=</span> <span class="p">(</span><span class="n">screen</span><span class="o">-&gt;</span><span class="n">width</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
+            <span class="n">screen</span><span class="o">-&gt;</span><span class="n">buffer</span><span class="p">[</span><span class="n">offset</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x99</span><span class="p">;</span>
+            <span class="n">screen</span><span class="o">-&gt;</span><span class="n">buffer</span><span class="p">[</span><span class="n">offset</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0xcc</span><span class="p">;</span>
+            <span class="n">screen</span><span class="o">-&gt;</span><span class="n">buffer</span><span class="p">[</span><span class="n">offset</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0xff</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kt">float</span> <span class="n">dz</span> <span class="o">=</span> <span class="mf">1.0f</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">z</span>  <span class="o">=</span> <span class="mf">1.0f</span><span class="p">;</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="n">z</span> <span class="o">&lt;</span> <span class="n">camera</span><span class="o">-&gt;</span><span class="n">distance</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">struct</span> <span class="n">point_t</span> <span class="n">point_left</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">cosphi</span> <span class="o">*</span> <span class="n">z</span> <span class="o">-</span> <span class="n">sinphi</span> <span class="o">*</span> <span class="n">z</span><span class="p">),</span>
+            <span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span> <span class="n">sinphi</span> <span class="o">*</span> <span class="n">z</span> <span class="o">-</span> <span class="n">cosphi</span> <span class="o">*</span> <span class="n">z</span><span class="p">)</span>
+        <span class="p">};</span>
+
+        <span class="k">struct</span> <span class="n">point_t</span> <span class="n">point_right</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span> <span class="n">cosphi</span> <span class="o">*</span> <span class="n">z</span> <span class="o">-</span> <span class="n">sinphi</span> <span class="o">*</span> <span class="n">z</span><span class="p">),</span>
+            <span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">sinphi</span> <span class="o">*</span> <span class="n">z</span> <span class="o">-</span> <span class="n">cosphi</span> <span class="o">*</span> <span class="n">z</span><span class="p">)</span>
+        <span class="p">};</span>
+        
+        <span class="kt">float</span> <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">point_right</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">point_left</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">screen</span><span class="o">-&gt;</span><span class="n">width</span><span class="p">;</span>
+        <span class="kt">float</span> <span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="n">point_right</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">point_left</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="n">screen</span><span class="o">-&gt;</span><span class="n">width</span><span class="p">;</span>
+        
+        <span class="n">point_left</span><span class="p">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">camera</span><span class="o">-&gt;</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+        <span class="n">point_left</span><span class="p">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">camera</span><span class="o">-&gt;</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+
+        <span class="kt">float</span> <span class="n">invz</span> <span class="o">=</span> <span class="mf">1.0f</span> <span class="o">/</span> <span class="n">z</span> <span class="o">*</span> <span class="n">scale_height</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">screen</span><span class="o">-&gt;</span><span class="n">width</span><span class="p">;</span> <span class="o">++</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">uint16_t</span> <span class="n">px</span> <span class="o">=</span> <span class="p">((</span><span class="kt">uint16_t</span><span class="p">)</span><span class="n">point_left</span><span class="p">.</span><span class="n">x</span> <span class="o">&amp;</span> <span class="n">map</span><span class="o">-&gt;</span><span class="n">shift</span><span class="p">);</span>
+            <span class="kt">uint16_t</span> <span class="n">py</span> <span class="o">=</span> <span class="p">((</span><span class="kt">uint16_t</span><span class="p">)</span><span class="n">point_left</span><span class="p">.</span><span class="n">y</span> <span class="o">&amp;</span> <span class="n">map</span><span class="o">-&gt;</span><span class="n">shift</span><span class="p">);</span>
+
+            <span class="kt">uint8_t</span> <span class="n">pos_height</span> <span class="o">=</span> <span class="n">get_value_map</span><span class="p">(</span><span class="n">map</span><span class="p">,</span> <span class="n">map</span><span class="o">-&gt;</span><span class="n">heightmap</span><span class="p">,</span> <span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">);</span>
+            <span class="kt">uint8_t</span> <span class="n">pos_color</span>  <span class="o">=</span> <span class="n">get_value_map</span><span class="p">(</span><span class="n">map</span><span class="p">,</span> <span class="n">map</span><span class="o">-&gt;</span><span class="n">colormap</span><span class="p">,</span> <span class="n">px</span><span class="p">,</span> <span class="n">py</span><span class="p">);</span>
+                
+            <span class="kt">float</span> <span class="n">height_screen</span> <span class="o">=</span> <span class="p">(</span><span class="n">camera</span><span class="o">-&gt;</span><span class="n">height</span> <span class="o">-</span> <span class="n">pos_height</span><span class="p">)</span> <span class="o">*</span> <span class="n">invz</span> <span class="o">+</span> <span class="n">camera</span><span class="o">-&gt;</span><span class="n">horizon</span><span class="p">;</span>
+            <span class="kt">uint8_t</span> <span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+
+            <span class="n">SDL_GetRGB</span><span class="p">(</span><span class="n">pos_color</span><span class="p">,</span> <span class="n">map</span><span class="o">-&gt;</span><span class="n">img_colormap</span><span class="o">-&gt;</span><span class="n">format</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+
+            <span class="n">draw_vline</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">height_screen</span><span class="p">,</span> <span class="n">screen</span><span class="o">-&gt;</span><span class="n">ybuffer</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">height_screen</span> <span class="o">&lt;</span> <span class="n">screen</span><span class="o">-&gt;</span><span class="n">ybuffer</span><span class="p">[</span><span class="n">x</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">screen</span><span class="o">-&gt;</span><span class="n">ybuffer</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">height_screen</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">point_left</span><span class="p">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">dx</span><span class="p">;</span>
+            <span class="n">point_left</span><span class="p">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">dy</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">z</span> <span class="o">+=</span> <span class="n">dz</span><span class="p">;</span>
+        <span class="n">dz</span> <span class="o">+=</span> <span class="n">PRECISION</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">args</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">args</span><span class="p">;</span>
+    <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">argv</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">SDL_Init</span><span class="p">(</span><span class="n">SDL_INIT_VIDEO</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&#34;SDL_Init&#34;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">IMG_Init</span><span class="p">(</span><span class="n">IMG_INIT_PNG</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&#34;IMG_Init&#34;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">SDL_Window</span> <span class="o">*</span><span class="n">window</span><span class="p">;</span>
+    <span class="n">SDL_Renderer</span> <span class="o">*</span><span class="n">renderer</span><span class="p">;</span>
+
+    <span class="n">window</span> <span class="o">=</span> <span class="n">SDL_CreateWindow</span><span class="p">(</span><span class="s">&#34;comanche&#34;</span> <span class="p">,</span> <span class="n">SDL_WINDOWPOS_CENTERED</span> <span class="p">,</span> <span class="n">SDL_WINDOWPOS_CENTERED</span> <span class="p">,</span> <span class="n">SCREEN_WIDTH</span><span class="p">,</span> <span class="n">SCREEN_HEIGHT</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">window</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&#34;SDL_CreateWindow&#34;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">EXIT_FAILURE</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">renderer</span> <span class="o">=</span> <span class="n">SDL_CreateRenderer</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">SDL_RENDERER_ACCELERATED</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">renderer</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>  <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&#34;SDL_CreateRenderer&#34;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">EXIT_FAILURE</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="k">struct</span> <span class="n">map_t</span> <span class="n">map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="p">.</span><span class="n">shift</span> <span class="o">=</span> <span class="mi">1023</span>
+    <span class="p">};</span>
+
+    <span class="k">struct</span> <span class="n">screen_t</span> <span class="n">screen</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="p">.</span><span class="n">renderer</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">,</span>
+
+        <span class="p">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">SCREEN_WIDTH</span><span class="p">,</span>
+        <span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">SCREEN_HEIGHT</span> 
+    <span class="p">};</span>
+
+    <span class="k">struct</span> <span class="n">camera_t</span> <span class="n">camera</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="p">.</span><span class="n">position</span> <span class="o">=</span> <span class="p">{</span><span class="mi">512</span><span class="p">,</span><span class="mi">512</span><span class="p">},</span>
+        <span class="p">.</span><span class="n">angle</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">,</span>
+        <span class="p">.</span><span class="n">distance</span> <span class="o">=</span> <span class="mf">6400.0f</span><span class="p">,</span>
+        <span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="mf">100.0f</span><span class="p">,</span>
+        <span class="p">.</span><span class="n">horizon</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="p">};</span>
+
+    <span class="n">SDL_Texture</span> <span class="o">*</span><span class="n">texture</span> <span class="o">=</span> <span class="n">SDL_CreateTexture</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">SDL_PIXELFORMAT_RGB24</span><span class="p">,</span> <span class="n">SDL_TEXTUREACCESS_STREAMING</span><span class="p">,</span> <span class="n">screen</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">screen</span><span class="p">.</span><span class="n">height</span><span class="p">);</span>
+    <span class="n">load_map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">map</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="n">FPSmanager</span> <span class="n">fps_manager</span><span class="p">;</span>
+
+    <span class="n">SDL_initFramerate</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fps_manager</span><span class="p">);</span>
+    <span class="n">SDL_setFramerate</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fps_manager</span><span class="p">,</span> <span class="mi">60</span><span class="p">);</span>
+
+    <span class="n">SDL_bool</span> <span class="n">done</span> <span class="o">=</span> <span class="n">SDL_FALSE</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">level_number</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">saved_x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">saved_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">saved_x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">saved_y</span><span class="p">;</span>
+
+    <span class="kt">uint64_t</span> <span class="n">now</span> <span class="o">=</span> <span class="n">SDL_GetPerformanceCounter</span><span class="p">();</span>
+    <span class="kt">uint64_t</span> <span class="n">last</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">delta_time</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">vel</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">done</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">last</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>
+        <span class="n">now</span> <span class="o">=</span> <span class="n">SDL_GetPerformanceCounter</span><span class="p">();</span>
+
+        <span class="n">delta_time</span> <span class="o">=</span> <span class="p">((</span><span class="n">now</span> <span class="o">-</span> <span class="n">last</span><span class="p">)</span><span class="o">*</span><span class="mf">1000.0f</span> <span class="o">/</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">SDL_GetPerformanceFrequency</span><span class="p">())</span> <span class="o">/</span> <span class="mf">1000.0f</span><span class="p">;</span>
+
+        <span class="n">SDL_Event</span> <span class="n">event</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">SDL_PollEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">switch</span><span class="p">(</span> <span class="n">event</span><span class="p">.</span><span class="n">type</span> <span class="p">){</span>
+            <span class="k">case</span> <span class="nl">SDL_QUIT</span><span class="p">:</span>
+                <span class="n">done</span> <span class="o">=</span> <span class="n">SDL_TRUE</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="nl">SDL_KEYDOWN</span><span class="p">:</span>
+                <span class="k">switch</span><span class="p">(</span> <span class="n">event</span><span class="p">.</span><span class="n">key</span><span class="p">.</span><span class="n">keysym</span><span class="p">.</span><span class="n">sym</span> <span class="p">){</span>
+                    <span class="k">case</span> <span class="nl">SDLK_w</span><span class="p">:</span>
+                    <span class="k">case</span> <span class="nl">SDLK_z</span><span class="p">:</span>
+                        <span class="n">vel</span> <span class="o">+=</span> <span class="mf">0.3f</span><span class="p">;</span>
+                        <span class="n">camera</span><span class="p">.</span><span class="n">height</span> <span class="o">+=</span> <span class="n">camera</span><span class="p">.</span><span class="n">horizon</span> <span class="o">*</span> <span class="mf">0.25</span> <span class="o">*</span> <span class="n">delta_time</span><span class="p">;</span>
+                        <span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">sin</span><span class="p">(</span><span class="n">camera</span><span class="p">.</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">CAMERA_SPEED</span> <span class="o">*</span> <span class="n">delta_time</span><span class="p">;</span>
+                        <span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">cos</span><span class="p">(</span><span class="n">camera</span><span class="p">.</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">CAMERA_SPEED</span> <span class="o">*</span> <span class="n">delta_time</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="nl">SDLK_s</span><span class="p">:</span>
+                        <span class="n">vel</span> <span class="o">-=</span> <span class="mf">0.2f</span><span class="p">;</span>
+                        <span class="n">camera</span><span class="p">.</span><span class="n">height</span> <span class="o">-=</span> <span class="n">camera</span><span class="p">.</span><span class="n">horizon</span> <span class="o">*</span> <span class="mf">0.25</span> <span class="o">*</span> <span class="n">delta_time</span><span class="p">;</span>
+                        <span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">sin</span><span class="p">(</span><span class="n">camera</span><span class="p">.</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">CAMERA_SPEED</span> <span class="o">*</span> <span class="n">delta_time</span><span class="p">;</span>
+                        <span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">cos</span><span class="p">(</span><span class="n">camera</span><span class="p">.</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">CAMERA_SPEED</span> <span class="o">*</span> <span class="n">delta_time</span><span class="p">;</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="nl">SDLK_n</span><span class="p">:</span>
+                        <span class="o">++</span><span class="n">level_number</span><span class="p">;</span>
+                        <span class="k">if</span><span class="p">(</span><span class="n">level_number</span> <span class="o">&gt;</span> <span class="mi">24</span><span class="p">)</span>
+                            <span class="n">level_number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                        <span class="n">load_map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">map</span><span class="p">,</span> <span class="n">level_number</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">case</span> <span class="nl">SDLK_p</span><span class="p">:</span>
+                        <span class="o">--</span><span class="n">level_number</span><span class="p">;</span>
+                        <span class="k">if</span><span class="p">(</span><span class="n">level_number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+                            <span class="n">level_number</span> <span class="o">=</span> <span class="mi">24</span><span class="p">;</span>
+                        <span class="n">load_map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">map</span><span class="p">,</span> <span class="n">level_number</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="k">default</span><span class="o">:</span>
+                        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;delta_time: %f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">delta_time</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="nl">SDL_MOUSEMOTION</span><span class="p">:</span> <span class="p">{</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">event</span><span class="p">.</span><span class="n">motion</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+                <span class="n">y</span> <span class="o">=</span> <span class="n">event</span><span class="p">.</span><span class="n">motion</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+            <span class="p">}</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">vel</span> <span class="o">-=</span> <span class="mf">0.15f</span><span class="p">;</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">vel</span> <span class="o">&lt;</span> <span class="mf">0.0f</span><span class="p">)</span>
+            <span class="n">vel</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">;</span>
+
+        <span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">vel</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">camera</span><span class="p">.</span><span class="n">angle</span><span class="p">);</span>
+        <span class="n">camera</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">vel</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">camera</span><span class="p">.</span><span class="n">angle</span><span class="p">);</span>
+
+        <span class="kt">float</span> <span class="n">delta_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">screen</span><span class="p">.</span><span class="n">height</span><span class="o">/</span><span class="mf">2.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> 
+        <span class="kt">float</span> <span class="n">delta_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">screen</span><span class="p">.</span><span class="n">width</span><span class="o">/</span><span class="mf">2.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">delta_x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">DEADZONE</span> <span class="o">||</span> <span class="n">abs</span><span class="p">(</span><span class="n">delta_y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">DEADZONE</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="n">camera</span><span class="p">.</span><span class="n">angle</span> <span class="o">-=</span> <span class="n">delta_x</span> <span class="o">/</span> <span class="n">screen</span><span class="p">.</span><span class="n">width</span> <span class="o">*</span> <span class="n">delta_time</span> <span class="o">*</span> <span class="mi">5</span><span class="p">;</span>
+            <span class="n">camera</span><span class="p">.</span><span class="n">horizon</span> <span class="o">-=</span> <span class="n">delta_y</span> <span class="o">/</span> <span class="n">screen</span><span class="p">.</span><span class="n">height</span> <span class="o">*</span> <span class="n">delta_time</span> <span class="o">*</span> <span class="mi">3500</span><span class="p">;</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">camera</span><span class="p">.</span><span class="n">horizon</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">520.0f</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">camera</span><span class="p">.</span><span class="n">horizon</span> <span class="o">=</span> <span class="o">-</span><span class="mf">520.0f</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">camera</span><span class="p">.</span><span class="n">horizon</span> <span class="o">&gt;</span> <span class="mf">520.0f</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">camera</span><span class="p">.</span><span class="n">horizon</span> <span class="o">=</span> <span class="mf">520.0f</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">render</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">camera</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">map</span><span class="p">,</span> <span class="mf">900.0f</span><span class="p">);</span>
+
+        <span class="n">SDL_UpdateTexture</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">screen</span><span class="p">.</span><span class="n">buffer</span><span class="p">,</span> <span class="n">screen</span><span class="p">.</span><span class="n">width</span> <span class="o">*</span> <span class="mi">3</span><span class="p">);</span>
+        <span class="n">SDL_RenderCopy</span><span class="p">(</span><span class="n">screen</span><span class="p">.</span><span class="n">renderer</span><span class="p">,</span> <span class="n">texture</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+
+        <span class="n">SDL_RenderPresent</span><span class="p">(</span><span class="n">screen</span><span class="p">.</span><span class="n">renderer</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">SDL_DestroyRenderer</span><span class="p">(</span><span class="n">renderer</span><span class="p">);</span>
+    <span class="n">SDL_DestroyWindow</span><span class="p">(</span><span class="n">window</span><span class="p">);</span>
+
+    <span class="n">SDL_FreeSurface</span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="n">img_heightmap</span><span class="p">);</span>
+    <span class="n">SDL_FreeSurface</span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="n">img_colormap</span><span class="p">);</span>
+
+    <span class="n">free</span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="n">heightmap</span><span class="p">);</span>
+    <span class="n">free</span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="n">colormap</span><span class="p">);</span>
+
+    <span class="n">IMG_Quit</span><span class="p">();</span>
+    <span class="n">SDL_Quit</span><span class="p">();</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+		</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2021 <a href="http://rachartier.github.io/">Raphaël CHARTIER</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="http://rachartier.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="http://rachartier.github.io/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js" integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>

@@ -6,7 +6,7 @@ comments: false
 images:
 ---
 
-## Lien
+## Liens
 [Github](https://github.com/rachartier/Dynamo)
 [PlayStore] (https://play.google.com/store/apps/details?id=iut.ipi.runnergame&hl=fr_CH&gl=US)
 

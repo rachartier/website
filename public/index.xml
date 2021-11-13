@@ -42,6 +42,18 @@ Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     C
     </item>
     
     <item>
+      <title>Truth Table</title>
+      <link>http://rachartier.github.io/code/ccomanche/</link>
+      <pubDate>Wed, 11 Mar 2020 23:00:35 +0200</pubDate>
+      
+      <guid>http://rachartier.github.io/code/ccomanche/</guid>
+      <description>Lien Github
+Petit projet qui permet de &amp;ldquo;voler&amp;rdquo; dans un vaisseau en s&amp;rsquo;inspirant du moteur du jeu &amp;ldquo;Comanche&amp;rdquo;.
+Le terrain est un terrain infini, avec plusieurs niveaux disponibles. Le moteur de jeu est très simple. 2 images permettent de répresenter le niveau: - Une image de couleurs - Une image en noir et blanc représentant la hauteur du terrain
+Ces deux images alors combinées permettent la création d&amp;rsquo;un niveau. L&amp;rsquo;algorithme utilisé va alors scanner les différents pixels en partant de la fin, puis se rapprocher avec un certain delta à chaque itération du joueur.</description>
+    </item>
+    
+    <item>
       <title>CV</title>
       <link>http://rachartier.github.io/cv/</link>
       <pubDate>Sun, 07 Apr 2019 00:36:29 +0200</pubDate>
@@ -51,30 +63,12 @@ Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     C
     </item>
     
     <item>
-      <title>A Propos</title>
-      <link>http://rachartier.github.io/a-propos/</link>
-      <pubDate>Sun, 07 Apr 2019 00:35:47 +0200</pubDate>
-      
-      <guid>http://rachartier.github.io/a-propos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://rachartier.github.io/about/</link>
-      <pubDate>Sat, 06 Apr 2019 22:20:59 +0200</pubDate>
-      
-      <guid>http://rachartier.github.io/about/</guid>
-      <description>coucou</description>
-    </item>
-    
-    <item>
       <title>Dynamo</title>
       <link>http://rachartier.github.io/projet/dynamo/</link>
       <pubDate>Wed, 06 Feb 2019 23:56:47 +0200</pubDate>
       
       <guid>http://rachartier.github.io/projet/dynamo/</guid>
-      <description>Lien Github [PlayStore] (https://play.google.com/store/apps/details?id=iut.ipi.runnergame&amp;amp;hl=fr_CH&amp;amp;gl=US)
+      <description>Liens Github [PlayStore] (https://play.google.com/store/apps/details?id=iut.ipi.runnergame&amp;amp;hl=fr_CH&amp;amp;gl=US)
 Dynamo est un jeu de plateforme liant agilité et vitesse pour parvenir à bout d&amp;rsquo;un unique niveau, long et remplit de pièges. Le jeu est 2d-scroller, ce qui signifie que le héros peut se déplacer à droite, gauche et sauter. Le but est donc de faire le plus gros score pour concurrencer ses amis. Pour faire le plus haut score, il faut récupérer un maximum de pièces et aller le plus vite possible sans se faire tuer par le boss ou tomber des plateformes…</description>
     </item>
     
@@ -108,6 +102,18 @@ gcc truthtable.c -Wall -Wextra -std=c11 -lm -o ttable ./ttable &amp;quot;express
       <guid>http://rachartier.github.io/code/pendule-double/</guid>
       <description>Pendule Double est la simulation de &amp;ldquo;l&amp;rsquo;aleatoire chaotique&amp;rdquo; en utilisant un pendule relie a un dernier, qui est fixe.
 Compilation gcc doublependulum.c -o doublependulum -lm -Wall -Wextra -lSDL2 -lSDL2main Commandes  a: diminue la taille du premier pendule | z: augmente la taille du premier pendule e: diminue la taille du second pendule | r: augmente la taille du second pendule q: diminue la masse du premier pendule | s: augmente la masse du premier pendule d: diminue la masse du second pendule | f: augmente la masse du second pendule i: affiche les informations des pendules dans la console n: permet de reinitialiser aléatoirement les pendules  Vidéo Vidéo de démonstration</description>
+    </item>
+    
+    <item>
+      <title>Tiny Virtual Machine</title>
+      <link>http://rachartier.github.io/code/tiny-virtual-machine/</link>
+      <pubDate>Wed, 05 Oct 2016 23:00:08 +0200</pubDate>
+      
+      <guid>http://rachartier.github.io/code/tiny-virtual-machine/</guid>
+      <description>Tiny Virtual Machine est un programme qui, en lisant un fichier source, va interpreter les commandes donnees par le-dit fichier.
+Chaque commande est constituee de quatre parties: une est l&amp;rsquo;opération, la deuxieme est l&amp;rsquo;emplacement dans le registre (0x00 - 0x10), la troisieme et quatrieme sont les nombres affectes par l&amp;rsquo;operation
+Les operations:
+ 0x01: les additions 0x02: les soustractions 0x03: les multiplications 0x04: les divisions 0x05: l&amp;rsquo;opérateur logique ET 0x06: l&amp;rsquo;opérateur logique OU 0x07: l&amp;rsquo;opérateur logique OU EXCLUSIF 0x08: le modulo (%) 0x09: decalage de bits vers la gauche 0x0A: decalage de bits vers la droite 0x0B: l&amp;rsquo;operateur NON  Methodes d&amp;rsquo;affichage:</description>
     </item>
     
   </channel>
