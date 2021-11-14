@@ -6,4 +6,4 @@ comments: false
 images:
 ---
 
-![](/img/cv_raphael_chartier2-1.png)
+![](/img/cv.jpg)
