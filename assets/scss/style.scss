@@ -228,7 +228,7 @@ table {
   top: 0;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.45);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.45);
   background-color: $dark-grey;
   animation-duration: .3s;
 transition: none !important; 
@@ -868,6 +868,7 @@ a.footnote-ref {
 		top: auto;
 		bottom: 0;
 		z-index: 1;
+		box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.45);
 	}
 
   .hide-in-mobile,
