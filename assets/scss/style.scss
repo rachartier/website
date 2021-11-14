@@ -230,7 +230,7 @@ table {
   box-sizing: border-box;
   box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.45);
   background-color: $dark-grey;
-  //animation-duration: .3s;
+  animation-duration: .3s;
 transition: none !important; 
 animation: none !important; 
 
@@ -863,6 +863,12 @@ a.footnote-ref {
 }
 
 @media (max-width: 760px) {
+	#site-header {
+		position: fixed;
+		top: auto;
+		bottom: 0;
+		z-index: 1;
+	}
 
   .hide-in-mobile,
   .site-nav.hide-in-mobile {
