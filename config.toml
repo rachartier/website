@@ -57,7 +57,7 @@ googleAnalytics = "UA-212819313-1"
     weight = 5
 
   [[menu.main]]
-    name = "Codes"
+    name = "Mon bac à sable"
     url = "code/"
     weight = 15
 

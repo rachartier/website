@@ -1,5 +1,5 @@
 ---
-title: "Dynamo"
+title: "Dynamo (Projet universitaire, JavaFX)"
 date: 2019-02-06T23:56:47+02:00
 draft: true
 comments: false

@@ -1,5 +1,5 @@
 ---
-title: "Pendule Double"
+title: "Pendule Double (C, SDL2)"
 date: 2017-01-23T23:00:18+02:00
 draft: true
 comments: false

@@ -1,5 +1,5 @@
 ---
-title: "Galaxy"
+title: "Galaxy (Projet personnel, C)"
 date: 2015-09-11T22:57:26+02:00
 draft: true
 comments: false

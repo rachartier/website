@@ -1,5 +1,5 @@
 ---
-title: "Ball Killer"
+title: "Ball Killer (Projet personnel, C, SDL)"
 date: 2013-01-20T22:57:51+02:00
 draft: true
 comments: false

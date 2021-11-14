@@ -1,5 +1,5 @@
 ---
-title: "DansTonTrump"
+title: "DansTonTrump (Projet universitaire, C++/QML, Sailfish)"
 date: 2020-07-07T01:00:00+02:00
 draft: true
 comments: false

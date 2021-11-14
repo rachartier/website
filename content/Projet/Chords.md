@@ -1,5 +1,5 @@
 ---
-title: "Chords"
+title: "Chords (Projet universitaire, Kotlin, Android)"
 date: 2020-07-07T01:00:00+02:00
 draft: true
 comments: false

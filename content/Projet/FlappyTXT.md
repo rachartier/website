@@ -1,5 +1,5 @@
 ---
-title: "FlappyTXT"
+title: "FlappyTXT (Projet personnel, C)"
 date: 2015-02-15T22:57:34+02:00
 draft: true
 comments: false

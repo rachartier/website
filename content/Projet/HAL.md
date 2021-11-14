@@ -1,5 +1,5 @@
 ---
-title: "HAL"
+title: "HAL (Projet universitaire, C# dotnet core 3.0)"
 date: 2020-07-07T00:00:00+02:00
 draft: true
 comments: false

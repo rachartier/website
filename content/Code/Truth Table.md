@@ -1,5 +1,5 @@
 ---
-title: "Truth Table"
+title: "Truth Table (C)"
 date: 2017-11-07T23:00:35+02:00
 draft: true
 comments: false

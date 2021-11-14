@@ -1,5 +1,5 @@
 ---
-title: "Tiny Virtual Machine"
+title: "Tiny Virtual Machine (C)"
 date: 2016-10-05T23:00:08+02:00
 draft: true
 comments: false

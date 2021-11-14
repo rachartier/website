@@ -1,5 +1,5 @@
 ---
-title: "Blue and White"
+title: "Blue and White (Projet personnel, C, SDL)"
 date: 2013-12-07T22:57:43+02:00
 draft: true
 comments: false

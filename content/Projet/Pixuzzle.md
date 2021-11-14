@@ -1,5 +1,5 @@
 ---
-title: "Pixuzzle"
+title: "Pixuzzle (Projet personnel, C, SDL)"
 date: 2014-02-11T22:57:37+02:00
 draft: true
 comments: false

@@ -1,5 +1,5 @@
 ---
-title: "SmartList"
+title: "SmartList (C)"
 date: 2016-10-05T22:59:58+02:00
 draft: true
 comments: false

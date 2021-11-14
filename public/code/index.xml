@@ -21,7 +21,7 @@ Ces deux images alors combinées permettent la création d&amp;rsquo;un niveau. 
     </item>
     
     <item>
-      <title>Truth Table</title>
+      <title>Truth Table (C)</title>
       <link>https://rachartier.github.io/code/truth-table/</link>
       <pubDate>Tue, 07 Nov 2017 23:00:35 +0200</pubDate>
       
@@ -33,7 +33,7 @@ gcc truthtable.c -Wall -Wextra -std=c11 -lm -o ttable ./ttable &amp;quot;express
     </item>
     
     <item>
-      <title>Pendule Double</title>
+      <title>Pendule Double (C, SDL2)</title>
       <link>https://rachartier.github.io/code/pendule-double/</link>
       <pubDate>Mon, 23 Jan 2017 23:00:18 +0200</pubDate>
       
@@ -43,7 +43,7 @@ Compilation gcc doublependulum.c -o doublependulum -lm -Wall -Wextra -lSDL2 -lSD
     </item>
     
     <item>
-      <title>Tiny Virtual Machine</title>
+      <title>Tiny Virtual Machine (C)</title>
       <link>https://rachartier.github.io/code/tiny-virtual-machine/</link>
       <pubDate>Wed, 05 Oct 2016 23:00:08 +0200</pubDate>
       
@@ -55,7 +55,7 @@ Les operations:
     </item>
     
     <item>
-      <title>SmartList</title>
+      <title>SmartList (C)</title>
       <link>https://rachartier.github.io/code/smartlist/</link>
       <pubDate>Wed, 05 Oct 2016 22:59:58 +0200</pubDate>
       
@@ -65,7 +65,7 @@ Les operations:
     </item>
     
     <item>
-      <title>DansTonChatConsole</title>
+      <title>DansTonChatConsole (C)</title>
       <link>https://rachartier.github.io/code/danstonchatconsole/</link>
       <pubDate>Sat, 25 Jul 2015 23:00:14 +0200</pubDate>
       
@@ -77,7 +77,7 @@ gcc dtcconsole.c $(pkg-config --libs --cflags libcurl) -Wall -Wextra -o dtcconso
     </item>
     
     <item>
-      <title>Mutation</title>
+      <title>Mutation (C&#43;&#43;)</title>
       <link>https://rachartier.github.io/code/mutation/</link>
       <pubDate>Mon, 23 Mar 2015 22:59:49 +0200</pubDate>
       
@@ -88,7 +88,7 @@ Chaque gène a donc 1% de chance d&amp;rsquo;être selectionné et d&amp;rsquo;�
     </item>
     
     <item>
-      <title>Horloge</title>
+      <title>Horloge (C)</title>
       <link>https://rachartier.github.io/code/horloge/</link>
       <pubDate>Thu, 19 Feb 2015 22:59:53 +0200</pubDate>
       

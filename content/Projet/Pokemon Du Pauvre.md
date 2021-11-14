@@ -1,5 +1,5 @@
 ---
-title: "Pokemon Du Pauvre"
+title: "Pokemon Du Pauvre (Projet universitaire, JavaFX)"
 date: 2018-11-14T22:57:02+02:00
 draft: true
 comments: false

@@ -9,7 +9,7 @@
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Tue, 07 Jul 2020 01:00:00 +0200</lastBuildDate><atom:link href="https://rachartier.github.io/projet/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Chords</title>
+      <title>Chords (Projet universitaire, Kotlin, Android)</title>
       <link>https://rachartier.github.io/projet/chords/</link>
       <pubDate>Tue, 07 Jul 2020 01:00:00 +0200</pubDate>
       
@@ -19,7 +19,7 @@ Recherche d&amp;rsquo;un accord et les accords de l&amp;rsquo;utilisateur en fav
     </item>
     
     <item>
-      <title>DansTonTrump</title>
+      <title>DansTonTrump (Projet universitaire, C&#43;&#43;/QML, Sailfish)</title>
       <link>https://rachartier.github.io/projet/danstontrump/</link>
       <pubDate>Tue, 07 Jul 2020 01:00:00 +0200</pubDate>
       
@@ -32,7 +32,7 @@ Il se décompose en 4 pages:
     </item>
     
     <item>
-      <title>HAL</title>
+      <title>HAL (Projet universitaire, C# dotnet core 3.0)</title>
       <link>https://rachartier.github.io/projet/hal/</link>
       <pubDate>Tue, 07 Jul 2020 00:00:00 +0200</pubDate>
       
@@ -42,7 +42,7 @@ Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     C
     </item>
     
     <item>
-      <title>Dynamo</title>
+      <title>Dynamo (Projet universitaire, JavaFX)</title>
       <link>https://rachartier.github.io/projet/dynamo/</link>
       <pubDate>Wed, 06 Feb 2019 23:56:47 +0200</pubDate>
       
@@ -52,7 +52,7 @@ Dynamo est un jeu de plateforme liant agilité et vitesse pour parvenir à bout 
     </item>
     
     <item>
-      <title>Pokemon Du Pauvre</title>
+      <title>Pokemon Du Pauvre (Projet universitaire, JavaFX)</title>
       <link>https://rachartier.github.io/projet/pokemon-du-pauvre/</link>
       <pubDate>Wed, 14 Nov 2018 22:57:02 +0200</pubDate>
       
@@ -62,7 +62,7 @@ Dynamo est un jeu de plateforme liant agilité et vitesse pour parvenir à bout 
     </item>
     
     <item>
-      <title>Galaxy</title>
+      <title>Galaxy (Projet personnel, C)</title>
       <link>https://rachartier.github.io/projet/galaxy/</link>
       <pubDate>Fri, 11 Sep 2015 22:57:26 +0200</pubDate>
       
@@ -72,7 +72,7 @@ Vous traversez les galaxies a bord de votre vaisseau en passant par differents s
     </item>
     
     <item>
-      <title>FlappyTXT</title>
+      <title>FlappyTXT (Projet personnel, C)</title>
       <link>https://rachartier.github.io/projet/flappytxt/</link>
       <pubDate>Sun, 15 Feb 2015 22:57:34 +0200</pubDate>
       
@@ -83,7 +83,7 @@ Le principe est vraiment très simple, il suffit d’entrer des commandes pour f
     </item>
     
     <item>
-      <title>Pixuzzle</title>
+      <title>Pixuzzle (Projet personnel, C, SDL)</title>
       <link>https://rachartier.github.io/projet/pixuzzle/</link>
       <pubDate>Tue, 11 Feb 2014 22:57:37 +0200</pubDate>
       
@@ -93,7 +93,7 @@ Le principe est vraiment très simple, il suffit d’entrer des commandes pour f
     </item>
     
     <item>
-      <title>Blue and White</title>
+      <title>Blue and White (Projet personnel, C, SDL)</title>
       <link>https://rachartier.github.io/projet/blue-and-white/</link>
       <pubDate>Sat, 07 Dec 2013 22:57:43 +0200</pubDate>
       
@@ -103,7 +103,7 @@ Vous pouvez choisir la taille de la map (1 à 100), afficher le temps, voir le n
     </item>
     
     <item>
-      <title>ASCII_PhysiX</title>
+      <title>ASCII_PhysiX (Projet personnel, C)</title>
       <link>https://rachartier.github.io/projet/ascii_physix/</link>
       <pubDate>Sun, 14 Apr 2013 22:57:58 +0200</pubDate>
       

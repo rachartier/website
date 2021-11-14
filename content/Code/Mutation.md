@@ -1,5 +1,5 @@
 ---
-title: "Mutation"
+title: "Mutation (C++)"
 date: 2015-03-23T22:59:49+02:00
 draft: true
 comments: false
@@ -28,7 +28,6 @@ La dernière génération est quand il ne reste plus qu'un gène, le gène qui a
 #include <vector>
 #include <random>
 
-// Tutoriel pratique d'un ami, Piticroissant: http://piticroissant.wordpress.com/2014/04/19/bien-generer-les-nombres-pseudo-aleatoires/
 template <typename T>
 T random(const T& min, const T& max)
 {

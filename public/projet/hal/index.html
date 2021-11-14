@@ -7,12 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#494f5c">
 	<meta name="msapplication-TileColor" content="#494f5c">
-<meta itemprop="name" content="HAL">
+<meta itemprop="name" content="HAL (Projet universitaire, C# dotnet core 3.0)">
 <meta itemprop="description" content="Lien Github
 Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     Choix Installations  Serveur  Docker  Exigence Installation avec Docker   Installation Manuelle  Installation     Client  Installation Manuelle     Serveur Docker Documentation  Docker-Compose du serveur  Volumes du serveur Variables d&rsquo;environnement   Mise à jour du Docker InfluxDB  Présentation Installation InfluxDB Volumes InfluxDB InfluxDB API InfluxQL Liaison avec HAL   Grafana  Présentation Grafana Installation Grafana Volumes Grafana Présentation rapide de l&rsquo;interface  Data Source   Grafana et InfluxQL   Tout-en-un   Serveur Installation Manuelle  Installation Manuelle Linux Installation Manuelle Windows   Client Installation  Installation Manuelle Linux Installation Manuelle Windows Configuration  Comprendre config."><meta itemprop="datePublished" content="2020-07-07T00:00:00+02:00" />
 <meta itemprop="dateModified" content="2020-07-07T00:00:00+02:00" />
 <meta itemprop="wordCount" content="5565"><meta itemprop="image" content="https://rachartier.github.io/background_meta.jpg"/>
-<meta itemprop="keywords" content="" /><meta property="og:title" content="HAL" />
+<meta itemprop="keywords" content="" /><meta property="og:title" content="HAL (Projet universitaire, C# dotnet core 3.0)" />
 <meta property="og:description" content="Lien Github
 Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     Choix Installations  Serveur  Docker  Exigence Installation avec Docker   Installation Manuelle  Installation     Client  Installation Manuelle     Serveur Docker Documentation  Docker-Compose du serveur  Volumes du serveur Variables d&rsquo;environnement   Mise à jour du Docker InfluxDB  Présentation Installation InfluxDB Volumes InfluxDB InfluxDB API InfluxQL Liaison avec HAL   Grafana  Présentation Grafana Installation Grafana Volumes Grafana Présentation rapide de l&rsquo;interface  Data Source   Grafana et InfluxQL   Tout-en-un   Serveur Installation Manuelle  Installation Manuelle Linux Installation Manuelle Windows   Client Installation  Installation Manuelle Linux Installation Manuelle Windows Configuration  Comprendre config." />
 <meta property="og:type" content="article" />
@@ -23,7 +23,7 @@ Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     C
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://rachartier.github.io/background_meta.jpg"/>
 
-<meta name="twitter:title" content="HAL"/>
+<meta name="twitter:title" content="HAL (Projet universitaire, C# dotnet core 3.0)"/>
 <meta name="twitter:description" content="Lien Github
 Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     Choix Installations  Serveur  Docker  Exigence Installation avec Docker   Installation Manuelle  Installation     Client  Installation Manuelle     Serveur Docker Documentation  Docker-Compose du serveur  Volumes du serveur Variables d&rsquo;environnement   Mise à jour du Docker InfluxDB  Présentation Installation InfluxDB Volumes InfluxDB InfluxDB API InfluxQL Liaison avec HAL   Grafana  Présentation Grafana Installation Grafana Volumes Grafana Présentation rapide de l&rsquo;interface  Data Source   Grafana et InfluxQL   Tout-en-un   Serveur Installation Manuelle  Installation Manuelle Linux Installation Manuelle Windows   Client Installation  Installation Manuelle Linux Installation Manuelle Windows Configuration  Comprendre config."/>
 
@@ -34,8 +34,8 @@ Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     C
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
 	<link rel="shortcut icon" href="/favicon.ico">
 
-	<title>HAL</title>
-	<link rel="stylesheet" href="https://rachartier.github.io/css/style.min.e2fe7e54bfbf89a16286c4371d6e7207a337113835ab028601bd4768497baf52.css" integrity="sha256-4v5+VL+/iaFihsQ3HW5yB6M3ETg1qwKGAb1HaEl7r1I=" crossorigin="anonymous">
+	<title>HAL (Projet universitaire, C# dotnet core 3.0)</title>
+	<link rel="stylesheet" href="https://rachartier.github.io/css/style.min.2f01bc4407841a807d6882ca02ad1b1e765ae5cadff331c150acbcff1e6ee7df.css" integrity="sha256-LwG8RAeEGoB9aILKAq0bHnZa5crf8zHBUKy8/x5u598=" crossorigin="anonymous">
 	
 </head>
 
@@ -50,7 +50,7 @@ Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     C
 				<nav class="site-nav hide-in-mobile">
 					
 				<a href="https://rachartier.github.io/projet/">Projets</a>
-				<a href="https://rachartier.github.io/code/">Codes</a>
+				<a href="https://rachartier.github.io/code/">Mon bac à sable</a>
 				<a href="https://rachartier.github.io/cv/">CV</a>
 
 				</nav>
@@ -63,14 +63,14 @@ Contents  Intro  Prérequis QuickStart  Utilisation du serveur avec Docker     C
 	<div id="mobile-menu" class="animated fast">
 		<ul>
 			<li><a href="https://rachartier.github.io/projet/">Projets</a></li>
-			<li><a href="https://rachartier.github.io/code/">Codes</a></li>
+			<li><a href="https://rachartier.github.io/code/">Mon bac à sable</a></li>
 			<li><a href="https://rachartier.github.io/cv/">CV</a></li>
 		</ul>
 	</div>
 
 
 	<main class="site-main section-inner thin animated fadeIn faster">
-		<h1>HAL</h1>
+		<h1>HAL (Projet universitaire, C# dotnet core 3.0)</h1>
 		<div class="content">
 			<h2 id="lien">Lien<a href="#lien" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p><a href="https://github.com/rachartier/hal">Github</a></p>
