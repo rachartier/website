@@ -1,5 +1,5 @@
 ---
-title: "CComanche"
+title: "CComanche (C, SDL2)"
 date: 2020-03-11T23:00:35+02:00
 draft: true
 comments: false
